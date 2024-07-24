@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="displayList">
+
+    </ul>
+    
+    <div id="img" class="images">
+        <div id="title"></div>
+    </div>
+    <div id="image">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script>
+        fetch("https://fakestoreapi.com/products/").then((response) => 
+        response.json()).then((res) => {
+            console.log(res)
+            htmlimageList = "";
+            htmltitle = ""
+            res.forEach(element => {
+                console.log(element.title);
+                console.log(element.immg);
+                htmlimageList += `<img src = "${element.image}" >`;
+            });
+            // console.log(htmlList);
+            document.getElementById("img").innerHTML = htmlimageList;  
+        });
+    </script>
+    
+</body>
+</html>
