@@ -4,33 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #data-container{
+            width: 50%;
+
+        }
+        .image{
+            width: 20%;
+
+        }
+        .star{
+            color: #ffd700;
+            font-size: 25px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-    <ul id="displayList">
-
-    </ul>
-    
-    <div id="img" class="images">
-        <div id="title"></div>
-    </div>
-    <div id="image">
+    <div id="container">
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <div id="data-container">
+
+    </div>
+
+
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script> -->
     <script>
         fetch("https://fakestoreapi.com/products/").then((response) => 
         response.json()).then((res) => {
             console.log(res)
-            htmlimageList = "";
-            htmltitle = ""
+            const dataContainer = document.getElementById("data-container");
             res.forEach(element => {
-                console.log(element.title);
-                console.log(element.immg);
-                htmlimageList += `<img src = "${element.image}" >`;
+
+                const itemContainer = document.createElement('div');
+                const itemName = document.createElement('h3');
+                const imagediv = document.createElement('img');
+                const ratespan = document.createElement('span');
+                itemName.textContent = element.title;
+                imagediv.setAttribute("src",`${element.image}`);
+                imagediv.classList.add("image");
+                ratespan.textContent = element.rating.rate;
+
+                const starsContainer = document.createElement('div');
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement('span');
+                    star.classList.add('star');
+                    star.textContent = i < element.rating.rate ? '*' : '*';
+                    starsContainer.appendChild(star);
+                }
+
+                itemContainer.appendChild(itemName);
+                itemContainer.appendChild(ratespan);
+                itemContainer.appendChild(starsContainer);
+                dataContainer.appendChild(imagediv);
+                dataContainer.appendChild(itemContainer);
             });
+
             // console.log(htmlList);
-            document.getElementById("img").innerHTML = htmlimageList;  
+            // document.getElementById("img").innerHTML = htmlimageList;  
         });
     </script>
     

@@ -3,6 +3,9 @@ import styles from './login.css';
 
 const LoginRegisterPage = () => {
     const [changeForm,setChangeForm] = useState(true)
+    // const [data,setData] = useState('');
+    const [data,setData] = useState({});
+    const [password,setPassword] = useState();
     return (
         <>
             <section className="user">
@@ -45,17 +48,22 @@ const LoginRegisterPage = () => {
                             <form className="forms_form">
                                 <fieldset className="forms_fieldset">
                                     <div className="forms_field">
-                                        <input type="text" placeholder="Full Name" className="forms_field-input" required />
+                                        {/* <input type="text"  placeholder="Full Name" name='fullname' className="forms_field-input" required onChange = {(e) => {setPassword(e.target.value)}} /> */}
+                                        <input type="text"  placeholder="Full Name" name='fullname' className="forms_field-input" required onChange={(e)=>setData(prev=>({...prev,[e.target.name]:e.target.value}))} />
                                     </div>
                                     <div className="forms_field">
-                                        <input type="email" placeholder="Email" className="forms_field-input" required />
+                                        <input type="email" placeholder="Email" name='email' className="forms_field-input" required onChange = {(e) => setData(pre =>({...pre,[e.target.name]:e.target.value}))} />
                                     </div>
                                     <div className="forms_field">
-                                        <input type="password" placeholder="Password" className="forms_field-input" required />
+                                        {/* <input type="password" placeholder="Password" className="forms_field-input" required onChange = {(e) => {setPassword(e.target.value)}} /> */}
+                                        <input type="password" placeholder="Password" name='password' className="forms_field-input" required  onChange = {(e) => setData(pre =>({...pre,[e.target.name]:e.target.value}))} />
                                     </div>
                                 </fieldset>
                                 <div className="forms_buttons">
                                     <input type="submit" value="Sign up" className="forms_buttons-action"/>
+                                    {/* {data} */}
+                                    {JSON.stringify(data)}
+                                    {/* {password} */}
                                 </div>
                             </form>
                         </div>
