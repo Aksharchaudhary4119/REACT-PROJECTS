@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            font-weight: 900;
+        }
+        form span{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post">
+
+        <table>
+            <tr>
+                <td><label for="username">User Name</label></td>
+                <td>
+                    <input type="text" name="username" id="username" onblur="requiredfield()" required>
+                    <span id="usernameerror">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td>
+                    <input type="text" name="password" id="password" required>
+                    <span id="passerror">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>
+                    <input type="email" name="email" id="email" required>
+                    <span id="emailerror">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile</label></td>
+                <td>
+                    <input type="tel" name="mobile" id="mobile" required>
+                    <span id="mobileerror">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="btn" id="btn"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function requiredfield(params) {
+            // let uname =  document.getElementById("username") 
+            // console.log(uname.value);
+            let uname =  document.getElementById("username").value 
+            // console.log(uname);
+            if (uname == "") {
+                document.getElementById("usernameerror").innerHTML = "This field is reuqired"
+            } else {
+                document.getElementById("usernameerror").innerHTML = ""
+            }
+        }
+    </script>
+</body>
+
+</html>

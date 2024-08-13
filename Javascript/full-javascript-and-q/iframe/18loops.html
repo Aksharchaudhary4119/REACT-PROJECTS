@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .summary{
+        font-size: 20px;
+      }
+    </style>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+  <details>
+    <summary class="summary"> 
+      What is Loops
+    </summary>
+    <p><b>ANS:-  </b>A loop is a program or script that repeats the same instructions or processes the same information over and over until receiving the order to stop. If not handled properly, a loop can cause the computer to become slower as it becomes overwhelmed with repeating the same steps in an endless loop.</p>
+    
+    <h2>Making decisions in your code — conditionals</h2>
+    
+    <pre>
+      In any programming language, the code needs to make decisions and carry out
+      actions accordingly depending on different inputs. For example, in a game, if
+      the player's number of lives is 0, then it's game over. In a weather app, if 
+      it is being looked at in the morning, show a sunrise graphic; show stars and 
+      a moon if it is nighttime. In this article, we'll explore how so-called conditional
+      statements work in JavaScript
+
+
+      કોઈપણ પ્રોગ્રામિંગ ભાષામાં, કોડને નિર્ણયો લેવા અને અમલમાં મૂકવાની જરૂર છે
+      વિવિધ ઇનપુટ્સ પર આધાર રાખીને તે મુજબની ક્રિયાઓ. ઉદાહરણ તરીકે, રમતમાં, જો
+      ખેલાડીના જીવનની સંખ્યા 0 છે, પછી તે રમત સમાપ્ત થઈ ગઈ છે. હવામાન એપ્લિકેશનમાં,
+      જો તે સવારે જોવામાં આવે છે, સૂર્યોદય ગ્રાફિક બતાવો; તારાઓ બતાવો અનેજો તે રાત્રિનો
+      સમય હોય તો ચંદ્ર. આ લેખમાં, અમે કેવી રીતે કહેવાતા શરતીનું અન્વેષણ કરીશું નિવેદનો 
+      JavaScript માં કામ કરે છે
+    </pre>
+  </details>
+
+  <details>
+    <summary class="summary">
+      if...else statements
+    </summary>
+    <p>Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble if...else statement.</p>    
+    
+    <pre>
+      if (condition) {
+        /* code to run if condition is true */
+      } else {
+        /* run some other code instead */
+      }
+
+      
+      let MathsMarks = 50;
+      let EngMarks = 60;
+        let AcoMarks = 80;
+        let StateMarks = 95;
+        
+        let TotalMarks = MathsMarks + EngMarks + AcoMarks + StateMarks;
+        console.log(TotalMarks);
+        
+        let AverageMarks = TotalMarks/4 
+        console.log(AverageMarks);
+
+        if (AverageMarks < 50) {
+          console.log("try it");
+        }
+        else {
+          console.log("Nice");
+        }
+      </pre>
+    </details>
+
+    <details>
+      <summary class="summary">
+        else if
+      </summary>
+      
+      
+      <p>The last example provided us with two choices, or outcomes — but what if we want more than two?</p>
+      
+      <p>There is a way to chain on extra choices/outcomes to your if...else — using else if. Each extra choice requires an additional block to put in between if () { } and else { } — check out the following more involved example, which could be part of a simple weather forecast application:</p>
+
+      <pre>
+        const select = document.querySelector("select");
+        const para = document.querySelector("p");
+        
+  select.addEventListener("change", setWeather);
+  
+  function setWeather() {
+    const choice = select.value;
+    
+    if (choice === "sunny") {
+      para.textContent =
+      "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+    } else if (choice === "rainy") {
+      para.textContent =
+      "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+    } else if (choice === "snowing") {
+    para.textContent =
+    "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+  } else if (choice === "overcast") {
+    para.textContent =
+    "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+  } else {
+    para.textContent = "";
+  }
+}
+</pre>
+</details>
+
+<details>
+   <summary class="summary">
+    Question And Answer
+   </summary>
+
+   <h2>
+    1. difference between exec () and test () methods
+   </h2>
+   <p>
+    In JavaScript, both exec() and test() methods are used with regular expressions, but they serve different purposes and return different types of results.</p>
+
+    <h3>'exec()' Method:</h3>
+    <ul>
+      <li>The exec() method is a method of the RegExp object in JavaScript.</li>
+      <li>It is used to search for a match in a string based on the regular expression pattern provided.</li>
+      <li>If a match is found, exec() returns an array containing information about the match, including the matched text and captured groups. If no match is found, it returns null.</li>
+      <li>If the regular expression is global (has the g flag), subsequent calls to exec() will continue searching for matches in the string, starting from where the last match ended.</li>
+    </ul>
+    <pre>
+      const regex = /hello (\w+)/;
+      const str = 'hello world';
+      const result = regex.exec(str);
+      console.log(result); // Output: ["hello world", "world"]
+    </pre>
+
+    <h3>2.test() Method:</h3>
+    <ul>
+      <li>The test() method is a method of the RegExp object in JavaScript.</li>
+      <li>It is used to test whether a string contains a match for the regular expression pattern provided.</li>
+      <li>Unlike exec(), test() returns a boolean value (true or false) indicating whether a match is found in the string.</li>
+      <li>It does not provide detailed information about the match, such as the matched text or captured groups; it only indicates whether there is a match</li>
+    </ul>
+
+    <pre>
+      const regex = /hello/;
+      const str = 'hello world';
+      const result = regex.test(str);
+      console.log(result); // Output: true
+
+    </pre>
+    
+</details>
+
+
+</body>
+</html>

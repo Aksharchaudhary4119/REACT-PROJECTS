@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .summary{
+        font-size: 20px;
+      }
+    </style>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+
+
+  <details>
+     <summary class="summary">
+       What is DOM
+     </summary>
+     <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+     <p>દસ્તાવેજ ઑબ્જેક્ટ મોડલ (DOM) એ વેબ દસ્તાવેજો માટે પ્રોગ્રામિંગ ઇન્ટરફેસ છે. તે પૃષ્ઠનું પ્રતિનિધિત્વ કરે છે જેથી પ્રોગ્રામ દસ્તાવેજનું માળખું, શૈલી અને સામગ્રી બદલી શકે. DOM દસ્તાવેજને નોડ્સ અને ઑબ્જેક્ટ તરીકે રજૂ કરે છે; આ રીતે, પ્રોગ્રામિંગ ભાષાઓ પૃષ્ઠ સાથે ક્રિયાપ્રતિક્રિયા કરી શકે છે.</p>
+     
+     <p>A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.</p>
+     <p>વેબ પેજ એ એક દસ્તાવેજ છે જે કાં તો બ્રાઉઝર વિન્ડોમાં અથવા HTML સ્ત્રોત તરીકે પ્રદર્શિત કરી શકાય છે. બંને કિસ્સાઓમાં, તે એક જ દસ્તાવેજ છે પરંતુ દસ્તાવેજ ઑબ્જેક્ટ મોડલ (DOM) રજૂઆત તેને હેરફેર કરવાની મંજૂરી આપે છે. વેબ પૃષ્ઠની ઑબ્જેક્ટ-ઓરિએન્ટેડ રજૂઆત તરીકે, તેને JavaScript જેવી સ્ક્રિપ્ટીંગ ભાષા સાથે સુધારી શકાય છે.</p>
+     
+     
+     <ul>
+       <li>For example, the DOM specifies that the querySelectorAll method in this code snippet must return a list of all the <p> elements in the document:</li>
+       </ul>
+       
+       <pre>
+         <!-- <script> -->
+           const paragraphs = document.querySelectorAll("p");
+           // paragraphs[0] is the first <p>            element
+             // paragraphs[1] is the second <p>           element, etc.
+               alert(paragraphs[0].nodeName);
+               
+               <!-- </script> -->
+               
+             ( All of the properties, methods, and events available for manipulating and creating web pages are organized into objects. For example,
+               the document object that represents the document itself, any table objects that implement the HTMLTableElement DOM interface for 
+               accessing HTML tables, and so forth, are all objects.
+
+               વેબ પૃષ્ઠોને હેરફેર કરવા અને બનાવવા માટે ઉપલબ્ધ તમામ ગુણધર્મો, પદ્ધતિઓ અને ઇવેન્ટ્સ ઑબ્જેક્ટમાં ગોઠવવામાં આવે છે. દાખ્લા તરીકે,
+               દસ્તાવેજ ઑબ્જેક્ટ કે જે દસ્તાવેજને જ રજૂ કરે છે, કોઈપણ ટેબલ ઑબ્જેક્ટ કે જે HTMLTableElement DOM ઇન્ટરફેસનો અમલ કરે છે
+               HTML કોષ્ટકોને ઍક્સેસ કરવું, અને તેથી આગળ, બધી વસ્તુઓ છે.)
+               
+               
+               
+              ( The DOM is built using multiple APIs that work together. The core DOM defines the entities describing any document and the objects 
+               within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the HTML 
+               DOM API adds support for representing HTML documents to the core DOM, and the SVG API adds support for representing SVG documents.
+
+               DOM એકસાથે કામ કરતા બહુવિધ API નો ઉપયોગ કરીને બનાવવામાં આવે છે. મુખ્ય DOM કોઈપણ દસ્તાવેજ અને ઑબ્જેક્ટનું વર્ણન કરતી સંસ્થાઓને વ્યાખ્યાયિત કરે છે
+               તેની અંદર. DOM માં નવી સુવિધાઓ અને ક્ષમતાઓ ઉમેરતા અન્ય API ની જરૂરિયાત મુજબ આને વિસ્તૃત કરવામાં આવે છે. ઉદાહરણ તરીકે, HTML
+               DOM API મુખ્ય DOM પર HTML દસ્તાવેજો રજૂ કરવા માટે સમર્થન ઉમેરે છે, અને SVG API SVG દસ્તાવેજોનું પ્રતિનિધિત્વ કરવા માટે સમર્થન ઉમેરે છે.)
+               
+               
+              </pre>
+            </details>   
+            <details>
+              <summary class="summary">
+                Fundamental data types
+              </summary>
+              
+              <div class="section-content"><p>This page tries to describe the various objects and types in simple terms. But there are a number of different data types being passed around the API that you should be aware of.</p>
+                <div class="notecard note" id="sect1">
+                  <p><strong>Note:</strong> Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as <strong>elements</strong>, although strictly speaking not every node is an element.</p>
+                </div>
+                <p>The following table briefly describes these data types.</p>
+                <figure class="table-container"><table class="standard-table">
+                  <thead>
+                    <tr>
+                      <th>Data type (Interface)</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/Document"><code>Document</code></a></td>
+                      <td>
+                        When a member returns an object of type <code>document</code> (e.g., the
+                        <code>ownerDocument</code> property of an element returns the
+                        <code>document</code> to which it belongs), this object is the root
+                        <code>document</code> object itself. The
+                        <a href="/en-US/docs/Web/API/Document">DOM <code>document</code> Reference</a>
+                        chapter describes the <code>document</code> object.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/Node"><code>Node</code></a></td>
+                      <td>
+                        Every object located within a document is a node of some kind. In an
+                        HTML document, an object can be an element node but also a text node or
+                        attribute node.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/Element"><code>Element</code></a></td>
+                      <td>
+                        The <code>element</code> type is based on <code>node</code>. It refers
+                        to an element or a node of type <code>element</code> returned by a
+                        member of the DOM API. Rather than saying, for example, that the
+                        <a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement()</code></a> method returns an
+                        object reference to a <code>node</code>, we just say that this method
+                        returns the <code>element</code> that has just been created in the DOM.
+                        <code>element</code> objects implement the DOM
+                        <code>Element</code> interface and also the more basic
+                        <code>Node</code> interface, both of which are included together in this
+                        reference. In an HTML document, elements are further enhanced by the
+                        HTML DOM API's <a href="/en-US/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> interface as well as
+                        other interfaces describing capabilities of specific kinds of elements
+                        (for instance, <a href="/en-US/docs/Web/API/HTMLTableElement"><code>HTMLTableElement</code></a> for
+                        <a href="/en-US/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> elements).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/NodeList"><code>NodeList</code></a></td>
+                      <td>
+                        A <code>nodeList</code> is an array of elements, like the kind that is
+                        returned by the method
+                        <a href="/en-US/docs/Web/API/Document/querySelectorAll"><code>document.querySelectorAll()</code></a>. Items in a
+                        <code>nodeList</code> are accessed by index in either of two ways:
+                        <ul>
+                          <li>list.item(1)</li>
+                          <li>list[1]</li>
+                        </ul>These two are equivalent. In the first, <code>item()</code> is the
+                        single method on the <code>nodeList</code> object. The latter uses the
+                        typical array syntax to fetch the second item in the list.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/Attr"><code>Attr</code></a></td>
+                      <td>
+                        When an <code>attribute</code> is returned by a member (e.g., by the
+                        <code>createAttribute()</code> method), it is an object reference that
+                        exposes a special (albeit small) interface for attributes. Attributes
+                        are nodes in the DOM just like elements are, though you may rarely use
+                        them as such.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="/en-US/docs/Web/API/NamedNodeMap"><code>NamedNodeMap</code></a></td>
+                      <td>
+                        A <code>namedNodeMap</code> is like an array, but the items are accessed
+                        by name or index, though this latter case is merely a convenience for
+                        enumeration, as they are in no particular order in the list. A
+                        <code>namedNodeMap</code> has an <code>item()</code> method for this
+                        purpose, and you can also add and remove items from a
+                        <code>namedNodeMap</code>.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table></figure>
+                <p>There are also some common terminology considerations to keep in mind. It's common to refer to any <a href="/en-US/docs/Web/API/Attr"><code>Attr</code></a> node as an <code>attribute</code>, for example, and to refer to an array of DOM nodes as a <code>nodeList</code>. You'll find these terms and others to be introduced and used throughout the documentation.</p></div>
+              </section>
+              
+              
+              <ul>
+                <li><a href="/en-US/docs/Web/API/Document/querySelector"><code>document.querySelector()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Document/querySelectorAll"><code>document.querySelectorAll()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Element/innerHTML"><code>Element.innerHTML</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Element/setAttribute"><code>Element.setAttribute()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Element/getAttribute"><code>Element.getAttribute()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/EventTarget/addEventListener"><code>EventTarget.addEventListener()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/HTMLElement/style"><code>HTMLElement.style</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Node/appendChild"><code>Node.appendChild()</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Window/load_event" title="window.onload"><code>window.onload</code></a></li>
+                <li><a href="/en-US/docs/Web/API/Window/scrollTo"><code>window.scrollTo()</code></a></li>
+              </ul>
+              
+              <h4>W3ASchool</h4>
+              <h2>JavaScript HTML DOM</h2>
+              <P>With the HTML DOM, JavaScript can access and change all the elements of an HTML document.</P>
+            </details>
+            
+            <details>
+              <summary class="summary">
+                The HTML DOM (Document Object Model)
+              </summary>
+              <p>When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+              <p>The HTML DOM model is constructed as a tree of Objects:</p>
+              <h4>The HTML DOM Tree of Objects</h4>
+              <img src="./images/pic_htmltree.gif" alt="">
+              
+              <h3>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</h3>
+              
+              <ul>
+                <li>JavaScript can change all the HTML elements in the page</li>
+                <li>JavaScript can change all the HTML attributes in the page</li>
+                <li>JavaScript can change all the CSS styles in the page</li>
+                <li>JavaScript can remove existing HTML elements and attributes</li>
+                <li>JavaScript can add new HTML elements and attributes</li>
+                <li>JavaScript can react to all existing HTML events in the page</li>
+                <li>JavaScript can create new HTML events in the page</li>
+              </ul>
+            </details>
+              
+            <details> 
+              <summary class="summary">
+                What You Will Learn
+              </summary>
+              <p>In the next chapters of this tutorial you will learn:</p>
+              <ul>
+                <li>How to change the content of HTML elements</li>
+                <li>How to change the style (CSS) of HTML elements</li>
+                <li>How to react to HTML DOM events</li>
+                <li>How to add and delete HTML elements</li>
+              </ul>
+            </details>
+              
+            <details>
+               <summary class="summary">
+                 What is the DOM
+               </summary>
+               <p>The DOM is a W3C (World Wide Web Consortium) standard.</p>
+               <p>The DOM defines a standard for accessing documents:</p>
+               <p><i>"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."</i></p>
+               <p>The W3C DOM standard is separated into 3 different parts:</p>
+               <ul>
+                 <li>Core DOM - standard model for all document types</li>
+                 <li>XML DOM - standard model for XML documents</li>
+                 <li>HTML DOM - standard model for HTML documents</li>
+                </ul>
+              </details>
+                
+              <details>
+                <summary class="summary">
+                What is the HTML DOM
+                </summary>
+                <p>The HTML DOM is a standard object model and programming interface for HTML. It defines:</p>
+                <ul>
+                  <li>The HTML elements as <b>objects</b>
+                  </li>
+                  <li>The <b>properties</b> of all HTML elements
+                  </li>
+                  <li>The <b>methods</b> to access all HTML elements</li>
+                  <li>The <strong>events</strong> for all HTML elements</li>
+                </ul>
+                <p>In other words:<b> The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</b></p>  
+              </details>
+                
+                <details>
+                  <summary class="summary">
+                    Interview Qustions And Answers
+                  </summary>
+                  
+                  <h3>
+                    1. Can you explain what the Document Object Model (DOM) is and its core functions?
+                  </h3>
+                  <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree-like model, allowing developers to manipulate its content and visual presentation. The DOM’s core functions include creating, reading, updating, and deleting nodes. Nodes represent elements, attributes, and text within the document. By manipulating these nodes, developers can dynamically change content and styles. For instance, JavaScript often uses the DOM API to interact with HTML elements in web development.    </p>
+                  
+                  <h3>2   . Can you differentiate between innerHTML and outerHTML in DOM manipulation?</h3>
+                  <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree-like object, allowing developers to manipulate its content and visual presentation.</p>
+                  <p>In HTML, DOM treats an HTML document as a tree-structure where each node is an object representing part of the document. The nodes can be manipulated by JavaScript, enabling dynamic content updates.</p>
+                  <p> XML’s use of DOM is similar but more flexible. While HTML strictly defines what objects can appear in a document and their relationships, XML does not have these restrictions. Any tag can be used, and any structure is valid if it complies with XML syntax rules. This flexibility allows XML to represent complex data structures beyond web pages, such as configuration files or structured data records.</p>
+                  
+                  
+                  
+                </details>
+                </body>
+                </html>

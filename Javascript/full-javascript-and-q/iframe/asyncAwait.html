@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // function sum(params) {
+      //     console.log("inside test");
+      //     return 10
+      // }
+      // function aftertest(params) {
+      //     data = sum()
+      //     console.log("inside aftertest",data);
+
+      // }
+      // aftertest()
+      // function sum(p,q) {
+      //     console.log("inside test");
+
+      //     return p+q
+      // }
+      // function aftertest(a,b,callbackfunc) {
+
+      //     ans = callbackfunc(a,b)
+      //     console.log("inside aftertest",ans);
+
+      // }
+      // aftertest(50,80,sum)
+
+      // setTimeout(function () { console.log("called inside set time out 1"); }, 1000);
+      // setTimeout(function () { console.log("called inside set time out 2"); }, 1000);
+      // setTimeout(function () { console.log("called inside set time out 3"); }, 1000);
+
+      // let myFuc = ()=> {
+      //     console.log("inside promise");
+      //     return "something"
+      // }
+      // let mypromise = new Promise(myFuc)
+
+      // let mypromise = new Promise(function (resolve,reject) {
+      //     // console.log(resolve,reject);
+      //     let a = 2;
+      //     if (a == 0) {
+      //         return resolve("success")
+      //     } else {
+      //         return reject("promise failed   ")
+      //     }
+      // })
+      // console.log(mypromise);
+      // mypromise.then(function (data) { console.log(data); });
+      // mypromise.then(function (data) { console.log(data); })
+      // mypromise.then(function (data) { console.log(data); }).catch(function (err) {
+      //     console.log(err);
+      // });
+
+      //   const myPromise = new Promise((resolve, reject) => {
+      //     console.log("called inside promise");
+      //     setTimeout(() => {
+
+      //         resolve("foo");
+      //     //   resolve("data");
+      //     }, 1000);
+      //   });
+      //   myPromise.then(
+      //     function (res) {
+      //       console.log(res);
+      //     },
+      //     function (err) {
+      //       console.log(err);
+      //     }
+      //   ).then(
+      //     function (res) {
+      //       console.log("sec",res);
+      //     },
+      //     function (err) {
+      //       console.log("sec",err);
+      //     }
+      //   );
+
+      //   function myDisplayer() {
+      //     return "data";
+      //   }
+
+      //   function myDisplayer() {
+      //     return new Promise(function (res, rej) {
+      //         res("I love coding !!");
+      //     });
+      //   }
+      //   console.log(myDisplayer().then(function (params) {
+      //     console.log(params);
+      //   }));
+      //   function myFunction() {
+      //     return "Hello";
+      //   }
+
+      //   let myPromise = new Promise(function (resolve) {
+      //     let req = new XMLHttpRequest();
+      //     req.open("GET", "mycar.html");
+      //     req.onload = function () {
+      //       if (req.status == 200) {
+      //         resolve(req.response);
+      //       } else {
+      //         resolve("File not Found");
+      //       }
+      //     };
+      //     req.send();
+      //   });
+      //   async function getFile() {
+      //     await myPromise
+      //     document.getElementById("demo").innerHTML = myPromise;
+      //   }
+
+      //   getFile();
+
+      //   let myPromise = new Promise(function (resolve) {
+      //     // let req = new XMLHttpRequest();
+      //     // req.open("GET", "mycar.html");
+      //     // req.onload = function () {
+      //     //   if (req.status == 200) {
+      //     //     resolve(req.response);
+      //     //   } else {
+      //     //     resolve("File not Found");
+      //     //   }
+      //     // };
+      //     // req.send();
+      //         resolve("data")
+      // });
+      //   async function getFile() {
+      //     await myPromise;
+      //     myPromise.then(function (data) {
+      //       console.log(data);
+      //       document.getElementById("demo").innerHTML = data;
+      //     });
+      //   }
+
+      //   getFile();
+
+    //   let myPromise = new Promise(function (resolve) {
+    //     setTimeout(() => {
+    //       resolve("something");
+    //     }, 3000);
+    //   });
+    //   async function getFile() {
+    //     await myPromise;
+    //     myPromise.then(function (data) {
+    //       console.log(data);
+    //       document.getElementById("demo").innerHTML = data;
+    //     });
+    //   }
+  
+    //   getFile();
+    //   let myPromise = (resolve)=> {
+    //     //   console.log(setTimeout(() => {
+    //     //      return "something"
+    //     //   }, 3000));
+    //     return setTimeout(() => {
+    //        return "something"
+    //     }, 3000);
+    //   };
+       let myPromise = new Promise(function (resolve) {
+        setTimeout(() => {
+          resolve("something");
+        }, 3000);
+      });
+      async function getFile() {
+        // await myPromise;
+        // console.log(myPromise);
+        // document.getElementById("demo").innerHTML = data;
+        await myPromise.then(function (data) {
+          console.log(data);
+        });
+      }
+
+      getFile();
+    </script>
+  </body>
+</html>

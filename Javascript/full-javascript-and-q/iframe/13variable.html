@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .summary{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <details class="border">
+      <summary class="summary">
+        what is variables
+      </summary>
+    <p>
+      Ans = Variables are containers for storing information. Creating a
+      variable in JavaScript is called "declaring" a variable: var carName;
+      After the declaration, the variable is empty (it has no value)
+    </p>
+    <p>
+      Ans = A JavaScript variable is simply a name of storage location. There
+      are two types of variables in JavaScript : local variable and global
+      variable
+    </p>
+    <pre>
+Ans = JavaScript variables are used to store data that can be changed later on. The ariables can be thought of as named containers. You can place data into these containers and then refer to the data simply by naming the container.
+
+            Before you use a variable in a JavaScript program, you must declare it. In JavaScript, you can declare the variables in 4 ways −
+            
+            Without using any keywords.
+            
+            Using the 'var' keyword.
+            
+            Using the 'let' keyword.
+            
+            Using the 'const' keyword.</pre
+    >
+    <p>
+      Ans = A JavaScript variable is just like a container to store value. The
+      name of the JavaScript variable must be as per the identifier rules
+    </p>
+  </details>
+
+  <details>
+    <summary class="summary">
+      The Basic of let
+    </summary>
+    
+    <pre>
+      Following are some examples of the Javascript let keyword in action:
+      
+      let monster = "grue" ;
+      let origin = 1950 ;
+      let username = "Akshar"
+      let user_name = "Shubham"
+      let userName = "Shubham"
+      
+      let userName = "Shubham joshi" // with the help of let keyword we are not able to redeclare variable with same name
+      
+      Unlike the keyword var, let prevents accidental redeclaration:
+      
+      var fearsome = "jiangshi" ;
+      var fearsome = "tarasque" ; // OK: var allows redeclarations
+      
+      let monster = "bakunawa" ;
+      let monster = "grue" ; // ERROR: let prevents redeclarations
+      </pre>
+    </details>
+    <details>
+      <summary class="summary">
+        Variables are Containers for Storing Data
+      </summary>
+      
+      <h3>JavaScript Variables can be declared in 3 ways:</h3>
+      
+      <pre>
+        var (variables)
+        let (variables)
+        const (constant)
+        </pre
+        >
+        
+        <h3>Example using let</h3>
+        <pre>
+          let x = 5;
+          let y = 6;
+          let z = x + y;
+          
+          </pre
+          >
+          <h3>Example using const</h3>
+          <pre>
+            const x = 5;
+            const z = x + y;
+            const y = 6;
+            </pre
+            >
+          </details>
+            
+          <details>
+            <summary class="summary">
+              Variables Names
+            </summary>
+            <pre>
+              At W3schools we use camelCase for identifier names (variables and functions).
+              
+              All names start with a letter.
+              
+              At the bottom of this page, you will find a wider discussion about naming rules.
+              
+              firstName = "John";
+              lastName = "Doe";
+              
+              price = 19.90;
+              tax = 0.20;
+              
+              fullPrice = price + (price * tax)
+              </pre>
+            </details>
+            <details>
+              <summary class="summary">
+                Space Around Operators
+              </summary>
+              
+              
+              <p>Always put spaces around operators ( = + - * / ), and after commas:</p>
+              
+              <h3>Examples:</h3>
+              
+              <pre>
+            let x = y + z;
+            const myArray = ["Volvo", "Saab", "Fiat"];
+            </pre
+            >
+            
+            <h2>Code Indentation</h2>
+            
+            <p>Always use 2 spaces for indentation of code blocks:</p>
+            
+            <h3>Functions:</h3>
+            
+            <pre>
+              function toCelsius(fahrenheit) {
+                return (5 / 9) * (fahrenheit - 32);
+              }
+              Do not use tabs (tabulators) for indentation. Different editors interpret tabs differently
+              </pre>
+            </details>
+            <details>
+              <summary class="summary">
+                Stetement Rules
+              </summary>
+              
+              
+              <p>General rules for simple statements:</p>
+              <ul>
+                <li>Alwyas end a simple stetemnet with a semicolon.</li>
+              </ul>
+              
+              <h3>Examples:</h3>
+              
+    <pre>
+            const cars=["Volvo","Saab","Fiat"];
+            
+            const persone={
+                firstName:"Akshar"
+                lastName:"Chaudhary"
+                age:"19"
+                eyeColor:"red"
+              };
+        </pre
+        >
+        <p>General rules for complex (compund) stetemnet:</p>
+        <ul>
+          <li>Put the opening brecket at the end of the first line.</li>
+      <li>Use one space before the opening brecket.</li>
+      <li>Put the closing brecket on a new line,without leading speces.</li>
+      <li>Do not end a complex stetemnet with a semicolon.</li>
+    </ul>
+    
+    <h3>Functions:</h3>
+    <pre>
+      function toCelsius(fahrenheit) {
+        return (5/9) * (fahrenheit-32);
+      }
+      </pre
+      >
+      <h3>Loops:</h3>
+      <pre>
+        for(time < 20) {
+          greeting="Good day";
+        } eles{
+          greeting="Good evening";    
+        }
+        </pre>
+      </details>
+
+      <details>
+        <summary class="summary">
+          Object Rules
+        </summary>
+        <div>
+          <p>General rules for object definathion</p>
+      <ul>
+        <li>Place the opening brecket on the line as the object name.</li>
+        <li>Use colon plus one space between each property and its value.</li>
+        <li>Use quotes around string values, not around numeric values.</li>
+        <li>Do not add a comma after the last property-value pair.</li>
+        <li>
+          Place the closing bracket on a new line, without leading spaces.
+        </li>
+        <li>Always end an object definition with a semicolon.</li>
+      </ul>
+    </div>
+
+    <h3>Examples:</h3>
+    <pre>
+      const person={
+        firstName:"Akshar"
+        lastName:"Chaudhary"
+        age:"19"
+        eyeColor:"red"  
+      };
+      
+      </pre
+      >
+      <p>
+        Short objects can be written compressed, on one line, using spaces only
+        between properties, like this:
+      </p>
+      
+      <p>
+        const
+        person=firstName:"Akshar",lastName:"Chaudhary",age:"19",eyeColor:"red"
+    </p>
+
+    <h2>Line Length < 80</h2>
+    <p>For readability, avoid lines longer than 80 characters.</p>
+    <p>
+      If a JavaScript statement does not fit on one line, the best place to
+      break it, is after an operator or a comma.
+    </p>
+    
+    <h3>Examples:</h3>
+    
+    <p>document.getElementById("demo").innerHTML =</p>
+    <h5>"Hello Akshar."</h5>
+  </details>
+    
+  <details>
+    <summary class="summary">
+      Naming Convention
+    </summary>
+    <div>
+      <p>
+        Always use the same naming convention for all your code. For example:
+      </p>
+      <ul>
+        <li>
+          Variable and function names written as camelCase user name userName,
+          dhway data => dhwayData
+        </li>
+        <li>
+          Global variables written in UPPERCASE (We don't, but it's quite
+          common)
+        </li>
+        <li>Constants (like PI) written in UPPERCASE</li>
+      </ul>
+      
+      <p>Constants (like PI) written in UPPERCASE</p>
+      <p>
+        This is a question programmers often discuss. The answer depends on who
+        you ask:
+      </p>
+      
+      <h5>Hyphens in HTML and CSS:</h5>
+      <pre>
+        HTML5 attributes can start with data- (data-quantity, data-price).
+        
+        CSS uses hyphens in property-names (font-size).
+                
+                Hyphens can be mistaken as subtraction attempts. Hyphens are not allowed in JavaScript names.
+                </pre
+      >
+      <h5>Underscores:</h5>
+      <pre>
+                Many programmers prefer to use underscores (date_of_birth), especially in SQL databases.
+                Underscores are often used in PHP documentation.
+            </pre
+            >
+            <h5>PascalCase:</h5>
+            <pre>
+              PascalCase is often preferred by C programmers. user name UserName, dhway data => DhwayData
+              </pre
+              > 
+              <h5>camelCase:</h5>
+              <pre>
+                camelCase is used by JavaScript itself, by jQuery, and other JavaScript libraries.
+                
+                Do not start names with a $ sign. It will put you in conflict with many JavaScript library names.
+                </pre
+                >
+              </details>
+
+              <details>
+                <summary class="summary">
+                  Loading JavaScript in HTML
+                </summary>
+                <p>
+                  Use simple syntax for loading external scripts (the type attribute is
+                  not necessary):
+                </p>
+
+                <h2>Accessing HTML Elements</h2>
+                <pre>
+                A consequence of using "untidy" HTML styles, might result in JavaScript errors.
+
+                These two JavaScript statements will produce different results:
+                
+                const obj = getElementById("Demo")
+                
+                const obj = getElementById("demo")
+                If possible, use the same naming convention (as JavaScript) in HTML
+              </pre>
+            </details>
+            
+            <details>
+              <summary class="summary">
+                File Extensions
+              </summary>
+              <pre>
+                HTML files should have a .html extension (.htm is allowed).
+                
+                CSS files should have a .css extension.
+                
+                JavaScript files should have a .js extension.
+              </pre>
+            </details>
+
+            <details>
+              <summary class="summary">
+                Use Lower Case File Names
+              </summary>
+              
+              <pre>
+                Most web servers (Apache, Unix) are case sensitive about file names:
+
+                london.jpg cannot be accessed as London.jpg.
+                
+                Other web servers (Microsoft, IIS) are not case sensitive:
+                
+                london.jpg can be accessed as London.jpg or london.jpg.
+                
+                If you use a mix of upper and lower case, you have to be extremely consistent.
+                
+                If you move from a case insensitive, to a case sensitive server, even small errors can break your web site.
+                
+                To avoid these problems, always use lower case file names (if possible).
+              </pre>
+            </details>
+    </div>
+
+    <details>
+      <summary class="summary">
+        Question And Answer
+      </summary>
+
+      <h3>1. what are the convention of namnig a variable in javascript?</h3>
+      <p>Variable names must start with a letter, an underscore ( _ ) or a dollar sign ( $ ). Variable names cannot contain spaces. Variables cannot be the same as reserved keywords such as if or const . By convention, JavaScript variable names are written in camelCase.</p>
+      <h3>2. What’s the difference between let and var?</h3>
+      <p>The difference between let and var is in the scope of the variables they create: Variables declared by let are only available inside the block where they're defined. Variables declared by var are available throughout the function in which they're declared.</p>
+      <h3>3. What are the ways of defining a variable in JavaScript?</h3>
+      <p>You declare a JavaScript variable with the var or the let keyword: var carName; or: let carName; After the declaration, the variable has no value (technically it is undefined ).</p>
+      <h3>4. What is the difference between Undefined and Undeclared in JavaScript?</h3> 
+      <p>As to what the difference between "undefined" and undefined is: one is a string, the other an object. typeof always returns the type of the variable as a string, because you can redefine undefined to something else so you couldn't properly compare it anymore, but "undefined" == "undefined" is always true.</p>
+
+    </details>
+  </body>
+</html>

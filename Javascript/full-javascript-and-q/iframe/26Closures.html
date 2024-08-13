@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .summary {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body  style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+
+    <details>
+        <summary class="summary">
+            Closurs
+        </summary>
+        <p>Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of a
+            function in the inner scope of a function. Lexical scoping is the process used to define the scope of a
+            variable by its position in the source code.</p>
+        <p>JavaScript માં ક્લોઝર એ લેક્સિકલ સ્કોપિંગનું એક સ્વરૂપ છે જેનો ઉપયોગ ફંક્શનના આંતરિક અવકાશમાં ફંક્શનના બાહ્ય
+            અવકાશમાંથી ચલોને સાચવવા માટે થાય છે. લેક્સિકલ સ્કોપિંગ એ પ્રક્રિયા છે જેનો ઉપયોગ ચલના અવકાશને સ્ત્રોત કોડમાં
+            તેની સ્થિતિ દ્વારા વ્યાખ્યાયિત કરવા માટે થાય છે.</p>
+
+        <h4>mdn</h4>
+        <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding
+            state (the lexical environment). In other words, a closure gives you access to an outer function's scope
+            from an inner function. In JavaScript, closures are created every time a function is created, at function
+            creation time.</p>
+
+        <h4>GeeksForGeeks</h4>
+        <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding
+            state (the lexical environment). When you create a closure, you gain access to an outer function’s scope
+            from an inner function. Closures are automatically created every time a function is defined in JavaScript.
+        </p>
+        <p>બંધ એ તેની આસપાસની સ્થિતિ (શાબ્દિક વાતાવરણ) ના સંદર્ભો સાથે એકસાથે બંડલ કરેલ (બંધ) કાર્યનું સંયોજન છે. જ્યારે
+            તમે બંધ કરો છો, ત્યારે તમે આંતરિક કાર્યમાંથી બાહ્ય કાર્યના અવકાશની ઍક્સેસ મેળવો છો. જ્યારે પણ JavaScript માં
+            ફંક્શન વ્યાખ્યાયિત કરવામાં આવે છે ત્યારે ક્લોઝર આપમેળે બનાવવામાં આવે છે.</p>
+
+        <h3>Lexical Scoping</h3>
+        <p>Lexical scoping refers to how a parser resolves variable names when functions are nested. The location where
+            a variable is declared within the source code determines where that variable is available. Nested functions
+            have access to variables declared in their outer scope. Consider the following example:
+        </p>
+        <p>લેક્સિકલ સ્કોપિંગ એ ઉલ્લેખ કરે છે કે જ્યારે ફંક્શન્સ નેસ્ટ કરવામાં આવે ત્યારે પાર્સર વેરિયેબલ નામોને કેવી
+            રીતે ઉકેલે છે. સોર્સ કોડની અંદર વેરીએબલ જાહેર કરવામાં આવે છે તે સ્થાન નક્કી કરે છે કે તે ચલ ક્યાં ઉપલબ્ધ છે.
+            નેસ્ટેડ ફંક્શન્સને તેમના બાહ્ય અવકાશમાં જાહેર કરાયેલા ચલોની ઍક્સેસ હોય છે. નીચેના ઉદાહરણને ધ્યાનમાં લો:</p>
+
+
+
+
+        <script>
+            function foo() {
+                let b = 1;
+                function inner() {
+                    return b;
+                }
+                return inner;
+            }
+            let get_func_inner = foo();
+
+            console.log(get_func_inner()); // outout 1
+            console.log(get_func_inner()); // outout 1
+            console.log(get_func_inner()); // outout 1
+
+        </script>
+
+        <script>
+
+            function foo(outer_arg) {
+
+                function inner(inner_arg) {
+                    return outer_arg + inner_arg;
+                }
+                return inner;
+            }
+            let get_func_inner2 = foo();
+
+            console.log(get_func_inner2(1));  // output NaN
+            console.log(get_func_inner2(3));  // output NaN
+
+            let get_func_inner3 = foo(5);
+
+
+            console.log(get_func_inner3(2)); // output 7
+            console.log(get_func_inner3(4)); // output 9
+
+        </script>
+
+        <script>
+
+            function outer(outer_data) {
+                function inner(inner_data) {
+
+                    return outer_data + inner_data;
+                }
+                return inner;
+            }
+            let get_func_inner4 = foo(8);
+
+            console.log(get_func_inner4(5));
+            console.log(get_func_inner4(4));
+            console.log(get_func_inner4(6));
+
+        </script>
+    </details>
+
+    <details>
+        <summary class="summary">
+            programiz
+        </summary>
+
+        <p>Before you learn about closures, you need to understand two concepts:</p>
+        <ol>
+            <li>Nested Function</li>
+            <li>Returning a function</li>
+        </ol>
+
+        <pre>
+        JavaScript Nested Function
+        In JavaScript, a function can also contain another function. This is called a nested function. For example,
+        
+         nested function example
+        
+        
+         outer function
+          function greet(name) {
+            
+             inner function
+             function displayName() {
+                 console.log('Hello' + name);
+     }
+    
+     calling inner function 
+     displayName();
+     }
+    
+     calling outer function 
+    greet(' Akshar');
+
+    output Hello Akshar
+    
+    
+    <script>
+        function data(name) {
+            function displayName() {
+                console.log('Hey' + name);
+            }
+            
+            displayName();
+        }
+        
+        data(' You')
+        
+        </script>
+</pre>
+
+</details>
+
+<details>
+    <summary class="summary">
+        Returning a Function
+    </summary>
+    <pre>
+
+        <!-- <script> -->
+            function study(name) {
+                function displayName() {
+                    console.log('Hey' + name);
+                }
+                return displayName;
+            }
+            
+            const g1 = study(' Akshar')
+            // console.log(g1);
+            g1();
+            // </script>
+</pre>
+
+<p>In JavaScript, closure provides access to the outer scope of a function from inside the inner function, even
+    after the outer function has closed. For example, </p>
+
+    <pre>
+        // javascript closure example
+
+        // outer function
+        function greet() {
+
+            // variable defined outside the inner function
+            let
+ name = 'John';
+            // inner function
+            function displayName() {
+
+                // accessing name variable
+                return 'Hi' + ' ' + name;
+            
+            }
+
+            return displayName;
+        }
+
+        const g1 = greet();
+        console.log(g1); // returns the function definition
+        console.log(g1()); // returns the value
+    
+        example 2
+
+        // closure example
+
+        function calculate(x) {
+            function multiply(y) {
+                return x * y;
+            }
+            return multiply;
+        }
+
+        const multiply3 = calculate(3);
+        const multiply4 = calculate(4);
+
+        console.log(multiply3); // returns calculate function definition
+        console.log(multiply3()); // NaN
+
+        console.log(multiply3(6)); // 18
+        console.log(multiply4(2)); // 8
+
+    </pre>
+
+    <script>
+        console.log("calculate");
+        function calculate(x) {
+            function multiply(y) {
+                return x * y;
+            }
+            return multiply;
+        }
+
+        const multiply3 = calculate(3);
+        const multiply4 = calculate(4);
+
+        // console.log(multiply3); // returns calculate function definition
+        // console.log(multiply3()); // NaN
+
+        console.log(multiply3(6)); // 18
+        console.log(multiply3(2)); // 18
+        console.log(multiply4(2)); // 18
+        // console.log(multiply4(2)); // 8
+    </script>
+</details>
+
+<details>
+<summary class="summary">
+    Data Privacy
+</summary>
+<pre>   
+    let a = 0;
+    function sum() {
+        function increaseSum() {
+
+            // the value of a is increased by 1
+            return a = a + 1;
+        }
+        return increaseSum;
+    }
+
+    const x = sum();
+    console.log(x()); // 1
+    console.log(x()); // 2
+    console.log(x()); // 3
+    a = a + 1;
+    console.log(a); // 4
+</pre>
+<script>
+    let a = 0;
+    function sum() {
+        function increaseSum() {
+
+            // the value of a is increased by 1
+            return a = a + 1;
+        }
+        return increaseSum;
+    }
+
+    const x = sum();
+    console.log(x()); // 1
+    console.log(x()); // 2
+    console.log(x()); // 3
+    a = a + 1;
+    console.log(a); // 4
+</script>
+
+<details>
+    <summary class="summary">
+        Common Use Cases
+    </summary>
+</details>
+Closures are useful in various scenarios:
+<ul>
+    <li>Maintaining State: Closures help maintain state between events in event-driven JavaScript.</li>
+    <li>Private Variables: You can create private variables by enclosing them within a closure.</li>
+    <li>Callbacks and Asynchronous Code: Closures are essential for handling callbacks and asynchronous operations.
+    </li>
+</ul>
+<a target="_blank" href="https://jsfiddle.net/hotae160/">Reference Example</a>
+</details>  
+
+<details>
+    <summary class="summary">
+        Question And Answer
+    </summary>
+    <h2>1. What are Closures in JavaScript?</h2>
+    <p>
+        A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.
+    </p>
+    <p>બંધ એ તેની આસપાસની સ્થિતિ (શાબ્દિક વાતાવરણ) ના સંદર્ભો સાથે એકસાથે બંડલ કરેલ (બંધ) કાર્યનું સંયોજન છે. બીજા શબ્દોમાં કહીએ તો, ક્લોઝર તમને આંતરિક કાર્યમાંથી બાહ્ય કાર્યના અવકાશની ઍક્સેસ આપે છે.</p>
+    <h2>2. What is Lexical Scoping? </h2>
+    <p>In other words, lexical scope refers to the ability of a function scope to access variables from the parent scope. When there is lexical scope, the innermost, inner and outermost functions may access all variables from their parent scopes all the way up to the global scope.</p>
+    <p>બીજા શબ્દોમાં કહીએ તો, લેક્સિકલ સ્કોપ પેરેંટ સ્કોપમાંથી ચલોને ઍક્સેસ કરવા માટે ફંક્શન સ્કોપની ક્ષમતાનો સંદર્ભ આપે છે. જ્યારે લેક્સિકલ અવકાશ હોય છે, ત્યારે સૌથી અંદરના, આંતરિક અને બાહ્યતમ ફંક્શન્સ તેમના પેરેંટ સ્કોપમાંથી વૈશ્વિક અવકાશ સુધીના તમામ ચલોને ઍક્સેસ કરી શકે છે.</p>
+    
+</details>
+
+
+
+
+
+</body>
+
+</html>

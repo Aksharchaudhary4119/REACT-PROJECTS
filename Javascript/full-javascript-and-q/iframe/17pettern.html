@@ -1,0 +1,98 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+
+    <script>
+        // for (let index = 0; index < 5; index++) {
+        //     document.write(" * ")
+        // }
+        //     for (let index = 0; index < 50; index++) {
+        //         if (index % 10 ==0){
+        //             document.write(" <br> ")
+        //         }else {
+        //             document.write(" * ")
+        //         }
+        //     }
+        
+        // for (let index = 0; index < 10; index++) {
+        //     for (let k =0; k < 10; k++) {
+        //         document.write(" * ")
+                
+        //     }
+        //     document.write(" <br>") 
+        // }
+
+
+        for (let index = 0; index < 10; index++) {
+            for (let k =0; k < index; k++) {
+                document.write(" * ")
+            }
+                document.write(" <br>") 
+        }
+
+        for (let index = 10; index > 0; index--) {
+        for (let k = 0; k < index; k++) {
+            document.write(" * ");
+        }
+        document.write(" <br>");
+    }
+
+        for (let index = 10; index > 0; index--) {
+    for (let k = 0; k < index; k++) {
+        document.write(" * ");
+    }
+    document.write(" <br>");
+}
+
+for (let index = 0; index < 10; index++) {
+    for (let k =0; k < index; k++) {
+        document.write(" * ")
+    }
+    document.write(" <br>") 
+}
+
+
+n = 5;
+
+      for (let index = 0; index < n; index++) {
+        console.log("modulo 5", n % 5);
+        console.log("modulo 5", index % 5);
+        let condition = n / 2;
+        if (index % 5 == 0) {
+          for (let i = 0; i <= 5; i++){
+
+              for (let j = 0; j <= i; j++) {
+                  document.write(" * ");
+                }
+                document.write(" <br> ");
+            }
+        }
+            else{
+                for (let i = 5; i >= 0; i--){
+                    if (index == 1)
+                    for (let j = 0; j < i; j++) {
+                document.write( " * ")
+            }
+            document.write( "<br>" )
+            }
+          }
+      }
+
+
+        
+
+
+
+    </script>
+
+    
+
+    
+</body>
+</html>

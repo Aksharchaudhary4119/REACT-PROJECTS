@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    
+
+    
+    <section aria-labelledby="comparison_operators"><h2 id="comparison_operators"><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators"></a>2  .  Comparison operators  </h2><div class="section-content"><p>
+        A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
+        The operands can be numerical, string, logical, or <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_objects">object</a> values.
+        Strings are compared based on standard lexicographical ordering, using Unicode values.
+        In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison.
+        This behavior generally results in comparing the operands numerically.
+        The sole exceptions to type conversion within comparisons involve the <code>===</code> and <code>!==</code> operators, which perform strict equality and inequality comparisons.
+        These operators do not attempt to convert the operands to compatible types before checking equality.
+        The following table describes the comparison operators in terms of this sample code:
+      </p>
+     
+      </code></pre></div>
+      <figure class="table-container"><table class="standard-table">
+        
+        <thead>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+            <th scope="col">Examples returning true</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a
+                        target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equal</a>  (<code>==</code>)
+                    </summary>
+                    <pre>
+The equality (==) operator checks whether its two 
+operands are equal, returning a Boolean result. Unlike
+the strict equality operator, it attempts to convert and
+compare operands that are of different types.
+
+    
+console.log(1 == 1);
+// Expected output: true
+
+console.log('hello' == 'hello');
+// Expected output: true
+
+console.log('1' == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+    
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the operands are equal.</td>
+            <td><code>3 == var1</code>
+              <p><code>"3" == var1</code></p><code>3 == '3'</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Not equal</a> (<code>!=</code>)
+                        
+                    </summary>
+                    <pre>
+The inequality (!=) operator checks whether its two operands
+are not equal, returning a Boolean result. Unlike the strict
+inequality operator, it attempts to convert and compare operands 
+that are of different types.
+
+
+console.log(1 != 1);
+// Expected output: false
+
+console.log('hello' != 'hello');
+// Expected output: false
+
+console.log('1' != 1);
+// Expected output: false
+
+console.log(0 != false);
+// Expected output: false
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the operands are not equal.</td>
+            <td><code>var1 != 4<br>var2 != "3"</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                        <summary>
+                            <a target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equal</a> (<code>===</code>)
+                        </summary>
+                        <pre>
+<p>The strict equality (===) operator checks whether its two operands
+   are equal, returning a Boolean result. Unlike the equality operator,
+   the strict equality operator always considers operands of different 
+   types to be different.</p>
+
+
+console.log(1 === 1);
+// Expected output: true
+
+console.log('hello' === 'hello');
+// Expected output: true
+
+console.log('1' === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+   
+                        </pre>
+                </details>
+            </td>
+            <td>
+              Returns <code>true</code> if the operands are equal and of the same
+              type. See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> and
+              <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.
+            </td>
+            <td><code>3 === var1</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict not equal</a> (<code>!==</code>)
+                    </summary>
+                    <pre>
+The strict inequality (!==) operator checks whether its two operands 
+are not equal, returning a Boolean result. Unlike the inequality operator,
+the strict inequality operator always considers operands of different types 
+to be different   
+
+
+console.log(1 !== 1);
+// Expected output: false
+
+console.log('hello' !== 'hello');
+// Expected output: false
+
+console.log('1' !== 1);
+// Expected output: true
+
+console.log(0 !== false);
+// Expected output: true
+
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the operands are of the same type but not equal, or are of different type.</td>
+            <td><code>var1 !== "3"<br>3 !== '3'</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than</a> (<code>&gt;</code>)
+                    </summary>
+                    <pre>
+<p>The greater than (>) operator returns true if the left operand is
+     greater than the right operand, and false otherwise.</p>
+
+    
+console.log(5 > 3);
+// Expected output: true
+
+console.log(3 > 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n > 5);
+// Expected output: false
+
+console.log('ab' > 'aa');
+// Expected output: true
+    
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the left operand is greater than the right operand.</td>
+            <td><code>var2 &gt; var1<br>"12" &gt; 2</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal</a>
+                        (<code>&gt;=</code>)
+                    </summary>
+                    <pre>
+<p>The greater than or equal (>=) operator returns true if the left operand 
+    is greater than or equal to the right operand, and false otherwise.</p>   
+    
+
+console.log(5 >= 3);
+// Expected output: true
+
+console.log(3 >= 3);
+// Expected output: true
+
+// Compare bigint to number
+console.log(3n >= 5);
+// Expected output: false
+
+console.log('ab' >= 'aa');
+// Expected output: true
+    
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the left operand is greater than or equal to the right operand.</td>
+            <td><code>var2 &gt;= var1<br>var1 &gt;= 3</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a>
+                        (<code>&lt;</code>)
+                    </summary>
+                    <pre>
+<p>The less than (<) operator returns true if the left operand is less 
+    than the right operand, and false otherwise.</p>     
+    
+
+ console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log('aa' < 'ab');
+// Expected output: true       
+
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the left operand is less than the right operand.</td>
+            <td><code>var1 &lt; var2<br>"2" &lt; 12</code></td>
+          </tr>
+          <tr>
+            <td>
+                <details>
+                    <summary>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal</a>
+                        (<code>&lt;=</code>)
+                    </summary>
+                    <pre>
+<p>The less than or equal (<=) operator returns true if the left operand is 
+    less than or equal to the right operand, and false otherwise.</p>
+    
+
+ console.log(5 <= 3);
+ // Expected output: false
+ 
+ console.log(3 <= 3);
+ // Expected output: true
+ 
+ // Compare bigint to number
+ console.log(3n <= 5);
+ // Expected output: true
+ 
+ console.log('aa' <= 'ab');
+ // Expected output: true
+
+
+                    </pre>
+                </details>
+            </td>
+            <td>Returns <code>true</code> if the left operand is less than or equal to the right operand.</td>
+            <td><code>var1 &lt;= var2<br>var2 &lt;= 5</code></td>
+          </tr>
+        </tbody>
+      </table></figure>
+      <div class="notecard note" id="sect1">
+        <p>
+          <strong>Note:</strong> <code>=&gt;</code> is not a comparison operator but rather is the notation
+          for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>.
+        </p>
+      </div></div></section>
+
+
+</body>
+</html>

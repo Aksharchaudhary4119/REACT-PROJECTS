@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Javascript </title>
+
+    
+    <link rel="icon" href="./Imges/JavaScript-Symbol.png" type="icon/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .data_2{
+          margin-top: 6rem; 
+        }
+        
+        .main-sec{
+          margin: 15px 0 0 0px; 
+          color: aqua;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .main-sec-2{
+          margin: 13px 0 0 0px; 
+          color: aqua;
+        }
+        ul li{
+          list-style: none;
+          
+        }
+        a:hover {
+          color: black
+        }
+        a{
+          color: aqua ;
+          text-decoration: none;
+        } 
+        .nav-item a:hover {
+          color: black;
+        }
+        .btn {
+          color: white;
+          background-color: gray;
+        }
+        /* .data{
+          background-color: palegoldenrod;
+        } */
+        
+    </style>
+  </head>
+  <body>
+    <!-- <div class="containers"> -->
+
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style=" background-color:  rgb(63 113 155); height: 80px;">
+          <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid" style=" background-color:  rgb(63 113 155); height: 80px;">
+              <a class="navbar-brand" href="#">
+                <img src="./Imges/JavaScript-Symbol.png" alt="" width="80">
+                JavaScript
+              </a>
+            </div>
+          </nav>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Links
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">HTML</a></li>
+                  <li><a class="dropdown-item" href="#">CSS</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./12jsIntro.html" target="myframe">JavaScript</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+      
+      
+      <table class="data" width="100%" style="height: 100vh" >
+        <tr>
+          <td class="data_2"width="20%" style="position: absolute; overflow: auto;  top: 0; background-color: rgba(37, 65, 9, 0.174); height: 100%;">
+            <div class="main-sec">
+              <ul>
+                <li>
+                  <a href="12jsIntro.html" target="myframe">Introduction</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-sec">
+              <ul>
+                <li>
+                  <a href="13variable.html" target="myframe">Variables</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-sec">
+              <ul>
+                <li>
+                  <a href="14datatype.html" target="myframe">Datatype</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-sec">
+              <ul>
+                <li>
+                  <a href="15hoisting.html" target="myframe">Hoisting</a>
+                </li>
+              </ul>
+            </div>
+            
+            <details style="background-color: rgb(63 113 155); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 16px;">
+              <summary class="main-sec-2">
+                <a href="./opreters.html" target="myframe">Operators</a>
+              </summary>
+              <div class="main-sec1">
+
+                <ul>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="01assignment_operators.html" target="myframe">1. Assignment operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operatorsassignment_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="02comparison_operators.html" target="myframe">2. Comparison operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavxaScript/Guide/Expressions_and_Operators#comparison_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="03arithmetic_operators.html" target="myframe">3. Arithmetic operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="04bitwise_operators.html" target="myframe">4. Bitwise operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="05logical_operators.html" target="myframe">5. Logical operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="06bigInt_operator.html" target="myframe">6. BigInt operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bigint_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="07string_operator.html" target="myframe">7. String operators</a>
+                    <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators" ></a> -->
+                  </li>
+                  <li style="padding: 10px 12px 0 0;">
+                    <a href="08condition_operator.html"  target="myframe">8. Conditional (ternary) operators</a >
+                      <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_ternary_operator" ></a> -->
+                    </li>
+                    <li style="padding: 10px 12px 0 0;">
+                      <a href="09comma_operator.html" target="myframe">9. Comma operators</a>
+                      <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comma_operator" ></a> -->
+                    </li>
+                    <li style="padding: 10px 12px 0 0;">
+                      <a href="10unary_operator.html" target="myframe">10. Unary operators</a>
+                      <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#unary_operators" ></a> -->
+                    </li>
+                    <li style="padding: 10px 12px 0 0;" >
+                      <a href="11relational_operators.html" target="myframe">11. Relational operators</a>
+                      <!-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#relational_operators" ></a> -->
+                    </li>
+                  </ul>
+                </div>
+                </details>
+                
+                <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="16Condition.html" target="myframe">Condition</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="17pettern.html" target="myframe">pettern</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="18loops.html" target="myframe">Loops  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="19eventlistnerVSeventhendler.html" target="myframe">Events  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./20scriptdefendInpredefend.html" target="myframe">Scriptdefend And Predefend </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./21dom.html" target="myframe">DOM  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./22javascriptHTMLDOMdocument.html" target="myframe"> HTML DOM Document  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./23function.html" target="myframe"> Functions  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./24scope.html" target="myframe">Scope  </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./25StrictMode.html" target="myframe"> Strict Mode</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./26Closures.html" target="myframe"> Closures</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./27ClosuresPrivateData.html" target="myframe"> ClosuresPrivateData</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./28Arrey.html" target="myframe"> Arrey</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-sec">
+                <ul>
+                  <li>
+                    <a href="./29String.html" target="myframe"> Strings</a>
+                  </li>
+                </ul>
+              </div>  
+              
+              <details style="background-color: rgb(63 113 155); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 16px;">
+                <summary class="main-sec-2">
+                  <a href="./30oops.html" target="myframe"> Oops</a>
+                </summary>
+                <ul>
+                  <li><a href="./31Encapsulation.html" target="myframe">Encapsulation</a></li>
+                  <li><a href="./32Inheritance.html" target="myframe">Inheritance</a></li>
+                  <li><a href="./33this.html" target="myframe">this</a></li>
+                  <li><a href="./34GettersandSetters.html" target="myframe">GettersandSetters</a></li>
+                  <li><a href="./35constructor.html" target="myframe">constructor</a></li>
+                  <li><a href="./36AccesModi.html" target="myframe">AccesModi</a></li>
+                  <li><a href="./37Static.html" target="myframe">Static</a></li>
+                  <li><a href="./38Polymorphisam.html" target="myframe">PolyMorphisam</a></li>
+                </ul>
+              </details>
+              <details style="background-color: rgb(63 113 155); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 16px;">
+                <summary class="main-sec-2">
+                  <a href="./30oops.html" target="myframe"> Validation</a>
+                </summary>
+                
+                <ul>
+                  <li><a href="./Validation.html" target="myframe">Validation</a></li>
+                  <li><a href="./validation_eventHandle.html" target="myframe">validation_eventHandle" </a></li>
+                  <li><a href="./full_validation.html" target="myframe">full_validation</a></li>
+                </ul>
+              </details>
+              <details style="background-color: rgb(63 113 155); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 16px;">
+                <summary class="main-sec-2">
+                Promises
+                </summary>
+                <ul>
+                  <li><a href="./41apicallingwithasyncawaitpromise.html" target="myframe">apicallingwithasyncawaitpromise</a></li>
+                  <li><a href="./asyncAwait.html" target="myframe">asyncawait</a></li>
+                </ul>
+              </details>
+              
+              
+            </td>
+            
+            <td style=" background-color: rgb(69, 123, 185);">
+              <iframe src="./Imges/Use-of-JavaScript.jpg" name="myframe" frameborder="0px" width="80%" align="right" height="100%"></iframe>
+            </td>
+          </tr>
+        </table>
+        
+        
+        
+        
+      <!-- </div> -->
+
+
+
+
+
+  
+  </body>
+  </html>
+  

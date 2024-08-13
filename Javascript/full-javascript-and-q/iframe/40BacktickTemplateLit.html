@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Strings are useful for holding data that can be represented in text form. Some of the most-used operations on
+        strings are to check their length, to build and concatenate them using the + and += string operators, checking
+        for the existence or location of substrings with the indexOf() method, or extracting substrings with the
+        substring() method. </p>
+    <pre>
+        const string1 = "A string primitive";
+        const string2 = 'Also a string primitive';
+        const string3 = `Yet another string primitive`;
+
+    </pre>
+
+
+    <button id="btn">Click</button>
+    <!-- <button onclick="">Click</button> -->
+    <div id="disp"></div>
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log("called");
+            let username = "Testing"
+            let tblstr = '<table><tr><td>test</td><td>test</td></tr></table>';
+            let tbl = '<table>';
+            tbl += "<tr>"
+            // tbl += '<td><label for="">UserName</label></td>'
+            tbl += "<td><label for=''>UserName</label></td>"
+            tbl += "<td>" + username + "</td>"
+            tbl += "</tr>"
+            tbl += '</table>'
+            tblback = `<table border="1">
+                    <tr>
+                        <td><label for="">UserName</label></td>
+                        <td>${username}</td>
+                    </tr>
+                    </table>`
+                    document.getElementById("disp").innerHTML = tblback
+        })
+
+    </script>
+</body>
+
+</html>

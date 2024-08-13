@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <h2 id="relational_operators">11  .  Relational operators</h2>
+            
+    <p>A relational operator compares its operands and returns a Boolean value based on whether the comparison is true.</p>
+  
+    <h3>in</h3>
+  
+    <h5>The in operator returns true if the specified property is in the specified object. The syntax is:</h5>
+    
+    <pre>
+      propNameOrNumber in objectName
+    </pre>
+  
+    <p>where propNameOrNumber is a string, numeric, or symbol expression representing a property name or array index, and objectName is the name of an object.</p>
+  
+    <h5>The following examples show some uses of the in operator.</h5>
+  
+    <pre>
+          // Arrays
+          const trees = ["redwood", "bay", "cedar", "oak", "maple"];
+          0 in trees; // returns true
+          3 in trees; // returns true
+          6 in trees; // returns false
+          "bay" in trees; // returns false
+          // (you must specify the index number, not the value at that index)
+          "length" in trees; // returns true (length is an Array property)
+          
+          // built-in objects
+          "PI" in Math; // returns true
+          const myString = new String("coral");
+          "length" in myString; // returns true
+          
+          // Custom objects
+          const mycar = { make: "Honda", model: "Accord", year: 1998 };
+          "make" in mycar; // returns true
+          "model" in mycar; // returns true
+    </pre>
+  
+    <h3>instanceof</h3>
+  
+    <p>The instanceof operator returns true if the specified object is of the specified object type. The syntax is:</p>
+  
+    <pre>
+      objectName instanceof objectType
+    </pre>
+  
+    <p>where objectName is the name of the object to compare to objectType, and objectType is an object type, such as Date or Array.</p>
+  
+    <p>Use instanceof when you need to confirm the type of an object at runtime. For example, when catching exceptions, you can branch to different exception-handling code depending on the type of exception thrown.</p>
+  
+    <p>For example, the following code uses instanceof to determine whether theDay is a Date object. Because theDay is a Date object, the statements in the if statement execute.</p>
+  
+    <pre>
+      const theDay = new Date(1995, 12, 17);
+      if (theDay instanceof Date) {
+      // statements to execute
+      }
+    </pre>
+    
+</body>
+</html>

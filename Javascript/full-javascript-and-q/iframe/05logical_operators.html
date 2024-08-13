@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    
+
+    <table class="fullwidth-table">
+        <h2 id="logical_operators">5  .  Logical operators</h2>
+        <thead>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Usage</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <details>
+                <summary>
+                  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND</a> (<code>&&</code>)
+                </summary>
+                <p>
+                  The logical AND (&&) (logical conjunction) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.
+                </p>
+
+                <p> More generally, the operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.</p>
+
+                <pre>
+ const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+                </pre>
+              </details>
+            
+            </td>
+            <td><code>expr1 &amp;&amp; expr2</code></td>
+            <td>
+              Returns <code>expr1</code> if it can be converted to <code>false</code>;
+              otherwise, returns <code>expr2</code>. Thus, when used with Boolean
+              values, <code>&amp;&amp;</code> returns <code>true</code> if both
+              operands are true; otherwise, returns <code>false</code>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <details>
+                <summary>
+                  <a target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR </a>(<code>||</code>)
+                </summary>
+                <p>The logical OR (||) (logical disjunction) operator for a set of operands is true if and only if one or more of its operands is true. It is typically used with boolean (logical) values. When it is, it returns a Boolean value. However, the || operator actually returns the value of one of the specified operands, so if this operator is used with non-Boolean values, it will return a non-Boolean value.</p>
+
+                <pre>
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+                </pre>
+              </details>
+              <td>
+            <td><code>expr1 || expr2</code></td>
+            <td>
+              Returns <code>expr1</code> if it can be converted to <code>true</code>;
+              otherwise, returns <code>expr2</code>. Thus, when used with Boolean
+              values, <code>||</code> returns <code>true</code> if either operand is
+              true; if both are false, returns <code>false</code>.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <details>
+                <summary>
+                  <a target="_blank"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">Logical NOT</a> (<code>!</code>)
+                </summary>
+                <p>The logical NOT (!) (logical complement, negation) operator takes truth to falsity and vice versa. It is typically used with boolean (logical) values. When used with non-Boolean values, it returns false if its single operand can be converted to true; otherwise, returns true.</p>
+
+                <pre>
+                  const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+                </pre>
+              </details>
+              <td>
+            <td><code>!expr</code></td>
+            <td>
+              Returns <code>false</code> if its single operand that can be converted
+              to <code>true</code>; otherwise, returns <code>true</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+
+
+</body>
+</html>

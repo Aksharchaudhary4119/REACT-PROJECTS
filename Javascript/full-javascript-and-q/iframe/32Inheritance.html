@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+
+    <details>
+        <summary class="summary">Inheritance</summary>
+    
+        <h3>Inheritance</h3>
+    
+        <h4>W3School</h4>
+    
+        <p> To create a class inheritance, use the extends keyword.</p>
+        <p> A class created with a class inheritance inherits all the methods from another class:</p>
+    
+    
+        <h4>developer.mozilla</h4>
+        <p> In programming, inheritance refers to passing down characteristics from a parent to a child so that a new piece
+            of code can reuse and build upon the features of an existing one. JavaScript implements inheritance by using
+            objects. Each object has an internal link to another object called its prototype. That prototype object has a
+            prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has
+            no prototype and acts as the final link in this prototype chain. It is possible to mutate any member of the
+            prototype chain or even swap out the prototype at runtime, so concepts like static dispatching do not exist in
+            JavaScript.</p>
+
+        <p> પ્રોગ્રામિંગમાં, વારસો એ માતા-પિતા પાસેથી બાળકમાં વિશેષતાઓ પસાર કરવાનો ઉલ્લેખ કરે છે જેથી એક નવો ભાગ
+            કોડનો પુનઃઉપયોગ કરી શકે છે અને અસ્તિત્વમાં છે તેનાં લક્ષણો પર બિલ્ડ કરી શકે છે. JavaScript નો ઉપયોગ કરીને વારસાનો અમલ કરે છે
+            વસ્તુઓ દરેક ઑબ્જેક્ટને તેના પ્રોટોટાઇપ તરીકે ઓળખાતા અન્ય ઑબ્જેક્ટ સાથે આંતરિક લિંક હોય છે. તે પ્રોટોટાઇપ ઑબ્જેક્ટ પાસે a
+            તેના પોતાના પ્રોટોટાઇપ, અને તેથી જ જ્યાં સુધી કોઈ ઑબ્જેક્ટ તેના પ્રોટોટાઇપ તરીકે નલ સાથે ન પહોંચે ત્યાં સુધી. વ્યાખ્યા દ્વારા, નલ પાસે છે
+            કોઈ પ્રોટોટાઈપ નથી અને આ પ્રોટોટાઈપ સાંકળમાં અંતિમ કડી તરીકે કામ કરે છે. ના કોઈપણ સભ્યને પરિવર્તિત કરવું શક્ય છે
+            પ્રોટોટાઇપ સાંકળ અથવા તો રનટાઇમ સમયે પ્રોટોટાઇપને સ્વેપ આઉટ કરો, તેથી સ્ટેટિક ડિસ્પેચિંગ જેવા ખ્યાલો અસ્તિત્વમાં નથી
+            JavaScript.</p>
+
+
+        <p> JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is
+            dynamic and does not have static types. While this confusion is often considered to be one of JavaScript's
+            weaknesses, the prototypal inheritance model itself is, in fact, more powerful than the classic model. It is,
+            for example, fairly trivial to build a classic model on top of a prototypal model — which is how classes are
+            implemented.</p>
+            <p> JavaScript વર્ગ-આધારિત ભાષાઓ (જેમ કે Java અથવા C++) માં અનુભવી વિકાસકર્તાઓ માટે થોડી ગૂંચવણમાં મૂકે છે, કારણ કે તે છે.
+                ગતિશીલ છે અને તેમાં સ્થિર પ્રકાર નથી. જ્યારે આ મૂંઝવણ ઘણી વખત JavaScript માંની એક માનવામાં આવે છે
+                નબળાઈઓ, પ્રોટોટાઇપલ વારસાગત મોડેલ પોતે, હકીકતમાં, ક્લાસિક મોડલ કરતાં વધુ શક્તિશાળી છે. તે છે,
+                ઉદાહરણ તરીકે, પ્રોટોટાઇપલ મૉડલની ટોચ પર ક્લાસિક મૉડલ બનાવવું એકદમ તુચ્છ છે - જે વર્ગો કેવી રીતે છે
+                અમલમાં મૂક્યો.</p>
+
+
+        <p> Although classes are now widely adopted and have become a new paradigm in JavaScript, classes do not bring a new
+            inheritance pattern. While classes abstract most of the prototypal mechanism away, understanding how prototypes
+            work under the hood is still useful.</p>
+            <p> જો કે વર્ગો હવે વ્યાપકપણે અપનાવવામાં આવ્યા છે અને JavaScriptમાં એક નવો દાખલો બની ગયા છે, વર્ગો નવું લાવતા નથી
+                વારસાગત પેટર્ન. જ્યારે વર્ગો મોટાભાગના પ્રોટોટાઇપલ મિકેનિઝમને અમૂર્ત કરે છે, પ્રોટોટાઇપ કેવી રીતે થાય છે તે સમજે છે
+                હૂડ હેઠળ કામ હજુ પણ ઉપયોગી છે.</p>
+    
+
+        <h4>programiz</h4>
+        <p> Inheritance enables you to define a class that takes all the functionality from a parent class and allows you to
+            add more.</p>
+            <p> વારસો તમને એવા વર્ગને વ્યાખ્યાયિત કરવા સક્ષમ બનાવે છે જે પિતૃ વર્ગમાંથી તમામ કાર્યક્ષમતા લે છે અને તમને પરવાનગી આપે છે
+                વધુ ઉમેરો.</p>
+
+
+        <p> Using class inheritance, a class can inherit all the methods and properties of another class.</p>
+        <p> વર્ગ વારસાનો ઉપયોગ કરીને, વર્ગ અન્ય વર્ગની તમામ પદ્ધતિઓ અને ગુણધર્મોને વારસામાં મેળવી શકે છે.</p>
+
+
+        <p> Inheritance is a useful feature that allows code reusability.</p>
+        <p> વારસો એ એક ઉપયોગી સુવિધા છે જે કોડ પુનઃઉપયોગની મંજૂરી આપે છે.</p>
+
+
+        <p> To use class inheritance, you use the extends keyword. For example,</p>
+        <p> વર્ગ વારસાનો ઉપયોગ કરવા માટે, તમે એક્સ્ટેન્ડ્સ કીવર્ડનો ઉપયોગ કરો છો. ઉદાહરણ તરીકે,</p>
+
+    
+        <img src="./Imges/currying-in-javascript-thumbnail (1).webp" alt="">
+        <script>
+    
+            // class MathOpetation {
+            //     addition(a, b) { 
+            //         return a + b 
+            //     }
+            //     subtraction(a, b) { 
+            //         return a - b 
+            //     }
+            //     division(a, b) { 
+            //         return a / b 
+            //     }
+            //     multiplication(a, b) { 
+            //         return a / b 
+            //     }
+            // }
+            // class AdvMathOpetation extends MathOpetation{
+            //     averageoftow(p, q) { 
+            //         // let MathOb = new MathOpetation
+            //         // console.log(MathOb);
+            //         // let sum =MathOb.addition()
+            //         let sum =this.addition(p,q)
+            //         console.log(sum);
+            //         return sum/2 
+            //     }
+            // }
+    
+            // objectOfAdMath = new AdvMathOpetation
+            // console.log(objectOfAdMath.averageoftow(50,90)); 
+
+            class MathOpetation {
+                addition (a, b) {
+                    return a + b
+                }
+                substraction (a, b) {
+                    return a - b
+                }
+                division (a, b) {
+                    return a / b
+                }
+                multiplication (a, b) {
+                    return a / b
+                }
+            }
+
+            class AdvMathOpetation extends MathOpetation{
+                averageoftow(s, d) {
+                    let sum =this.addition(s,d)
+                    console.log(sum);
+                    return sum/4
+                }
+            }
+
+            objectOfAdMath = new AdvMathOpetation
+            console.log(objectOfAdMath.averageoftow(80,80));
+    
+            // class car{
+            //     wheel(){}
+            //     wheelmag(){}
+            //     top(){}
+            //     topOpen(){}
+            //     bottom(){}
+            //     logo(){}
+            //     engineePetrol(){}
+            //     engineeEv(){}
+            //     model(){}
+            // }
+            // let objectOfCar = new car
+    
+            // TataEvBasic = objectOfCar.bottom()+objectOfCar.wheelmag()
+            // TataEvMid = objectOfCar.bottom()+objectOfCar.wheel()
+    
+    
+    
+    
+        </script>
+    
+    
+    </details>
+    
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+
+    <details>
+        <summary class="summary">
+            Encapsulation
+        </summary>
+
+        <p>wrapping the data into a singale unit its done through the class, class is an example of Encapsulation</p>
+        <p>class is a collaction of datamember and member Function only</p>
+        <p>without instance of class we are not able to access the property of class at out side of the class</p>
+        <p>Instant = Object</p>
+        <p>let objecVar = New className </p>
+        <p>with the help of class we are providing basic lavel of securety to our code</p>
+        <h4>Pros:</h4>
+        <p>classes can make your code more modular and easier to understand.</p>
+        <p>classes support inheritance, which allows you to create more specialized objects that shre some of the same
+            Functionality as the base class.</p>
+        <p>classes can help to oragnize your code and make it more rfficient.</p>
+        <h4>Cons:</h4>
+        <p>clsses can make your code more complex, which can make it more difficult to understand, debug, and maintain.
+        </p>
+        <p>classes are not as flexible as other programming constructs, such as Function and prototypes, wich can make
+            them difficult to use in certain situations. </p>
+        <p>classes may not be suitable for all types of project,depending on the specific requirements and goal odf the
+            project</p>
+
+
+
+        <script>
+
+            // sum = a + b // procces of addition talking around 1000 line code and we are using it in our project multiple time
+
+            // function addition() { 50 + 50}
+            // function addition(a,b) { a+b}
+
+            // function addition(a,b) { return a+b }
+            // class MathOpetation {
+            //     addition (a,b) { return a + b}
+            // }
+            // creating an object with new keyword START
+            // let MathOpetationObj = new MathOpetation
+            // console.log(MathOpetationObj);
+            // creating an object with new kayword END
+
+            // access / calling methods of class at out side of the class with the help of class instance START
+            // let res = MathOpetationObj.addition(50, 90)
+            // console.log(res);
+            // access / calling methods of class at out side of the class with help of class instance END
+
+            class data {
+                addition(a, b) { return a + b }
+            }
+
+            let dataObj = new data
+            console.log(dataObj);
+
+            let are = dataObj.addition(40, 60)
+            console.log(are);
+
+            class test {
+                addition(a, b) { return a + b }
+            }
+
+            let testObj = new test
+            console.log(testObj);
+
+            let you = dataObj.addition(80, 50)
+            console.log(you);
+
+
+            class Car {
+                name
+                company
+                color
+            }
+
+            const myCar1 = new Car()
+            myCar1.name = "Penthom"
+            myCar1.company = "Rolls Royal"
+            myCar1.color = "Black"
+
+            const myCar2 = new Car()
+            myCar2.name = "Fortuner"
+            myCar2.company = "Toyota"
+            myCar2.color = "White"
+
+            console.log(myCar1);
+            console.log(myCar2);
+
+
+        </script>
+
+    </details>
+
+</body>
+
+</html>

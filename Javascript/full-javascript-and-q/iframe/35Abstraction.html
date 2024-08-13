@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body  style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+    <p>
+        <strong>Abstraction</strong> : Abstraction means displaying only essential information and hiding the details.
+        Data abstraction refers to providing only essential information about the data to the outside world, hiding the
+        background details or implementation.
+
+    </p>
+    <p>
+        <strong>Encapsulation</strong>
+        : The process of wrapping properties and functions within a single unit is known as encapsulation.
+    </p>
+
+    Example: Let’s understand encapsulation with an example.
+
+    <p>Sometimes encapsulation refers to the hiding of data or data Abstraction which means representing essential features hiding the background detail. Most of the OOP languages provide access modifiers to restrict the scope of a variable, but there are no such access modifiers in JavaScript, there are certain ways by which we can restrict the scope of variables within the Class/Object. </p>
+  
+  <pre>
+      
+      <!-- <script> -->
+        // Encapsulation example
+        class person {
+            #data = "something"
+            constructor(name, id) {
+                this.name = name;
+                this.id = id;
+            }
+            add_Address(add) {
+                this.add = add;
+            }
+            getDetails() {
+                console.log(`Name is ${this.name}, Address is: ${this.add}`);
+            }
+        }
+        
+        class fulldetailsofperson{
+            detailwithmobile(mob){
+                console.log(`Name is ${this.name}, Address is: ${this.add}, Mobile : ${data}`);
+            }
+        }
+        
+        let person1 = new person('Mukul', 21);
+        person1.add_Address('Delhi');
+        person1.getDetails();
+        
+        // </script>
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <div id="assignment_operators">
+      <h2>1 . Assignment operators</h2>
+      <figure class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Shorthand operator</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                  Assignment
+                    <a
+                    target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+                              
+                                
+ [The assignment (=) operator is used to assign a value to a variable or property.
+ The assignment expression itself has a value, which is the assigned value. This
+ allows multiple assignments to be chained in order to assign a single value to multiple variables.]
+            
+
+ let c = 5;
+ const d  = 20
+ console.log(c);
+ // output 5
+          
+ console.log(c = d + 1); // 20+1
+ //outpu
+
+
+ console.log(c = d * 5); // 20*5
+ //output 100
+
+
+ console.log(c = d - 6); // 20-6
+ // output 14
+
+
+
+ let e = 2;
+ const f = 8
+ console.log(e);
+ //output 2
+
+
+ console.log(e = f);
+ // output 8
+
+                            </pre
+                  >
+                </details>
+              </td>
+              <td><code>x = f()</code></td>
+              <td><code>x = f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Addition assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+[The addition assignment (+=) operator performs addition
+ (which is either numeric addition or string concatenation)
+ on the two operands and assigns the result to the left operand.]
+
+
+                                
+   let f = 5;
+   let g = 'Hello';
+   console.log(f += 2); // Addition
+   // output 7
+   console.log(g += ' world'); // Concatenation
+   console.log(f += 5); // Addition
+                
+
+                                </pre
+                  >
+                </details>
+              </td>
+              <td><code>x += f()</code></td>
+              <td><code>x = x + f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Subtraction assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+
+                 [The subtraction assignment (-=) operator performs subtraction on
+                  the two operands and assigns the result to the left operand.]
+
+
+            
+ let h = 6;
+ console.log(h -= 5);
+ // output 1
+
+ console.log(h -= 25);
+ // output -24
+ 
+ console.log(h -= 'Hello');
+ // output NaN
+ // console.log(h -= 2);
+                  
+
+                                </pre
+                  >
+                </details>
+              </td>
+              <td><code>x -= f()</code></td>
+              <td><code>x = x - f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Multiplication assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+                                    
+  [The multiplication assignment (*=) operator performs multiplication on
+  the two operands and assigns the result to the left operand.]
+                                    
+ let j = 5;                               
+ console.log(j *= 7);   
+
+ console.log(j *= 'Hello World');   
+
+ let you = 8;
+ console.log(you *= 3);
+                                   
+                            </pre
+                  >
+                </details>
+              </td>
+              <td><code>x *= f()</code></td>
+              <td><code>x = x * f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Division assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+
+   The division assignment (/=) operator performs division on the two 
+   operands and assigns the result to the left operand.
+
+   
+    let l = 4;
+
+    l /= 3;
+    console.log(l);
+   // output 1.3333
+
+   l /= 'Akshar';
+   console.log(l);
+   // output NaN
+
+                                    </pre
+                  >
+                </details>
+              </td>
+              <td><code>x /= f()</code></td>
+              <td><code>x = x / f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Remainder assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+  The remainder assignment (%=) operator performs remainder on the two 
+  operands and assigns the result to the left operand.
+
+    let  i = 6; 
+
+    console.log(i %= 5);
+    // output 1
+
+    console.log(i %= 0);
+    // output NaN
+
+    console.log(i %= 0);
+    // output NaN
+
+                                      </pre
+                  >
+                </details>
+              </td>
+              <td><code>x %= f()</code></td>
+              <td><code>x = x % f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Exponentiation assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+ The **exponentiation assignment (**=)** operator performs exponentiation on
+  the two operands and assigns the result to the left operand.
+
+  
+ let o = 2;
+
+ console.log(o **= 6);
+ // output 64 
+
+ console.log(o **= 0);
+ // output 1
+                                </pre
+                  >
+                </details>
+              </td>
+              <td><code>x **= f()</code></td>
+              <td><code>x = x ** f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Left shift assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+     The left shift assignment (<<=) operator performs left shift on the 
+     two operands and assigns the result to the left operand.
+
+        let p = 7
+
+        console.log(p <<= 5);
+        // output 224
+
+        console.log(p <<= 0);
+        // output 224
+     
+                                </pre
+                  >
+                </details>
+              </td>
+              <td><code>x &lt;&lt;= f()</code></td>
+              <td><code>x = x &lt;&lt; f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Right shift assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>The right shift assignment (>>=) operator performs right shift on the
+     two operands and assigns the result to the left operand.</p>
+ let a = 5; //  00000000000000000000000000000101
+
+ a >>= 2; //  000000000000000000000000000000016
+
+ console.log(a);
+ // Expected output: 1
+
+ let b = -5; //  11111111111111111111111111111011
+ b >>= 2; //  11111111111111111111111111111110
+
+ console.log(b);
+  // Expected output: -2
+                                </pre>
+                </details>
+              </td>
+
+              <td><code>x &gt;&gt;= f()</code></td>
+              <td><code>x = x &gt;&gt; f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Unsigned right shift assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+  The unsigned right shift assignment (>>>=) operator
+   performs unsigned right shift on the two operands 
+   and assigns the result to the left operand.
+
+    let a = 5;
+    // console.log(a >>>= 5);
+    // output 0
+
+    a >>>= 2;
+    console.log(a);
+    // output 1
+    
+   
+                                </pre
+                  >
+                </details>
+              </td>
+              <td><code>x &gt;&gt;&gt;= f()</code></td>
+              <td><code>x = x &gt;&gt;&gt; f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Bitwise AND assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>The bitwise AND assignment (&=) operator performs bitwise AND on the 
+    two operands and assigns the result to the left operand.</p>
+
+
+     let a = 5; // 00000000000000000000000000000101
+     a &= 3; // 00000000000000000000000000000011
+ 
+     console.log(a); // 00000000000000000000000000000001
+     // Expected output: 1
+ </pre>
+                </details>
+              </td>
+              <td><code>x &amp;= f()</code></td>
+              <td><code>x = x &amp; f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Bitwise XOR assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>
+    The bitwise XOR assignment (^=) operator performs bitwise XOR on the
+    two operands and assigns the result to the left operand.
+</p>
+
+ 
+    let a = 3; // 00000000000000000000000000000101
+    a ^= 5; //00000000000000000000000000000101
+
+    console.log(a); //  00000000000000000000000000000110
+    // output 6
+
+    let b = 6;
+    b ^= 4;
+
+    console.log(b);
+    // output 2
+
+    let d = 7;
+    d ^= 5;
+
+    console.log(d);
+    // output 2
+
+ 
+
+
+                                </pre>
+                </details>
+              </td>
+              <td><code>x ^= f()</code></td>
+              <td><code>x = x ^ f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Bitwise OR assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>
+    The bitwise OR assignment (|=) operator performs bitwise OR
+ on the two operands and assigns the result to the left operand.
+</p>
+
+    let a = 5; // 00000000000000000000000000000101
+    a |= 3; // 00000000000000000000000000000011
+
+    console.log(a); // 00000000000000000000000000000111
+    // output 7
+
+            
+                            </pre>
+                </details>
+              </td>
+              <td><code>x |= f()</code></td>
+              <td><code>x = x | f()</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Logical AND assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>
+    The logical AND assignment (&&=) operator only evaluates the
+    right operand and assigns to the left if the left operand is truthy.
+</p>
+
+    let a = 3;
+    let b = 4;
+
+    a &&= 4;
+    console.log(a);
+    // output 4
+    
+    b &&= 2;
+    console.log(b);
+    // output 0
+
+                              </pre>
+                </details>
+              </td>
+              <td><code>x &amp;&amp;= f()</code></td>
+              <td><code>x &amp;&amp; (x = f())</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Logical OR assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+<p>The logical OR assignment (||=) operator only evaluates the
+ right operand and assigns to the left if the left operand is falsy.</p>
+
+ 
+const a = { duration : 70, title : '' }
+
+a.duration ||= 10;
+console.log(a.duration);
+// output 70
+
+a.title ||= 'title is empty.'
+console.log(a.title);
+    //output title is empty  
+
+                           
+               </pre>
+                </details>
+              </td>
+              <td><code>x ||= f()</code></td>
+              <td><code>x || (x = f())</code></td>
+            </tr>
+            <tr>
+              <td>
+                <details>
+                  <summary>
+                    Nullish coalescing assignment
+                    <a
+                      target="_blank"
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment"
+                      >Reference</a
+                    >
+                  </summary>
+                  <pre>
+ <p>The nullish coalescing assignment (??=) operator, also known
+      as the logical nullish assignment operator, only evaluates 
+      the right operand and assigns to theleft if the left operand
+      is nullish (null or undefined).</p>
+
+                                
+  var x // declaration
+  x = 465
+  y = 55
+  
+  // if (x == undefined || x == null) {
+  //     x = y
+  // }
+  // console.log(x);
+  
+  x ??= y  // Means : x ?? (x = y)
+  console.log(x);
+  // console.log("nullish ??=",x );
+  // console.log("nullish ??",x ?? y);
+  // console.log("print x",x);
+  // console.log("print y",y);
+                                    
+                                </pre>
+                </details>
+              </td>
+              <td><code>x ??= f()</code></td>
+              <td><code>x ?? (x = f())</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+  </body>
+</html>

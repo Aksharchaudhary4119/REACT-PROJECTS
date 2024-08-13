@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .summary{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <details>
+      <summary class="summary">
+        What is Hoisting
+      </summary>
+      <b>ANS -:</b><i> In javascript, hosting refers to the built-in-beheviour of the lang
+        through which declration of functiuon, Variables,and classes are moved to
+        the top of thire scope - all before code execution.In turn, this allows us
+        yo use functhion,m variables, and classes before threy are ddclered.</i>
+        <p>જાવાસ્ક્રિપ્ટમાં, હોસ્ટિંગ એ લેંગના બિલ્ટ-ઇન-બિહેવિયરનો ઉલ્લેખ કરે છે જેના દ્વારા ફંક્શન, વેરિયેબલ્સ અને ક્લાસની ઘોષણા ત્રણ સ્કોપની ટોચ પર ખસેડવામાં આવે છે - આ બધું કોડ એક્ઝિક્યુશન પહેલાં. બદલામાં, આ અમને ફંક્શનનો ઉપયોગ કરવાની મંજૂરી આપે છે,
+          વેરિયેબલ્સ, અને threy પહેલાંના વર્ગો ડીડીકલર્ડ છે.</p>
+        
+        <ul>
+          <li>In this post, we'll expolore a few Examples of hoosting, as well as look
+            at the impect that hosting has on the code we write.</li>
+          </ul>
+          
+        </details>
+    
+<details>
+  <summary class="summary">
+    Declaration
+  </summary>
+  <p>
+    Before we begin,let's make sure we're on the same page regarding
+    Declaration. In javascript, Declaration incluide using:
+  </p>
+    <div>
+      <ul>
+        <li>function to be declare a function (incluide generators)</li>
+        <li>
+          async function to be declare an syne function (incluide generators)
+        </li>
+        <li>class to declare class</li>
+        <li>var to declare variable</li>
+        <li>let to declare block-scoped variable</li>
+        <li>const to declare a block-scoped,non-reassignble variable</li>
+      </ul>
+    </div>
+    <div>
+      <details>
+        <summary>
+          Example
+        </summary>
+        <pre>
+          // Declaration a function 
+          function myfunction() {
+            //...
+          } 
+          
+          // Declaration a variable 
+          let a = "a";
+          
+          // Declaration a class 
+          class Myclass {
+            0  //...
+          }
+        </pre>
+      </details>
+      <p>
+          In the above snippet, we are simply making three declarations: a
+          function, a variable, and a class. Now, what does it mean to hoist these
+          declarations?
+      </p>
+      <p>ઉપરના સ્નિપેટમાં, અમે ફક્ત ત્રણ ઘોષણાઓ કરી રહ્યા છીએ: એક ફંક્શન, એક વેરીએબલ અને ક્લાસ. હવે આને ફરકાવવાનો શું અર્થ છે
+        ઘોષણાઓ?</p>
+    </div>
+  </details>
+
+  <details>
+    <summary class="summary">
+      Functhion hosting.
+    </summary>
+    
+    <p>
+      Under the hood, function declarations are put into memory at compile time.
+      As such, this makes it possible to, on execution, call a declared function
+      before it is defined.
+    </p>
+    
+    <details>
+      <summary>
+        Example
+      </summary>
+      <pre>
+        
+        console.log(greeting()); // "Hello there!"
+        
+        
+        function greeting() 
+        return "Hello there!";
+        
+        
+      </pre>
+    </details> 
+    <p>In the above snippet, we are able to log the return value of invoking greeting() before that function is even defined. This is all due to function hoisting – a built-in behavior of JavaScript that hoists a function’s declaration and its value to the top of their scope.</p>
+    
+    <ul>
+      <li>
+        <b>Note that this differs from invoking a function that is never declared:</b>
+      </li>
+    </ul>
+    <pre>
+      console.log(greeting()); // ReferenceError: greeting is not defined
+      
+    </pre>
+    <p>Since the function is never defined anywhere, the JavaScript interpreter evaluates the expression as a ReferenceError.</p>
+    <p>Now that we’ve seen how JavaScript hoists functions, let’s take a look at how variables are hoisted.</p>
+    
+  </details>
+    
+<details>
+  <summary class="summary"> 
+    Variable hoisting with var.
+  </summary>
+  <p>Unlike function hoisting, variable hoisting shows slightly different behavior. When a variable is declared with the var keyword, the JavaScript interpreter still hoists its declaration. However, it differs from how functions are hoisted in that the value of the variable (if it has one) is not included.</p>
+  <p>ફંક્શન હોસ્ટિંગથી વિપરીત, વેરિયેબલ હોસ્ટિંગ થોડું અલગ વર્તન દર્શાવે છે. જ્યારે var કીવર્ડ સાથે વેરીએબલ જાહેર કરવામાં આવે છે, ત્યારે JavaScript દુભાષિયા હજુ પણ તેની ઘોષણા કરે છે. જો કે, તે વેરીએબલની કિંમત (જો તે હોય તો) સમાવેલ નથી તેમાં ફંક્શન કેવી રીતે ફરકાવવામાં આવે છે તેનાથી અલગ છે.</p>
+  
+    <details>
+
+      <summary>
+        Example
+      </summary>
+      <pre>
+        
+        console.log(a); // undefined
+        
+        var a = "a";
+        
+        console.log(a); // "a"
+      </pre>
+    </details>
+    <p>When the variable a is hoisted, the JavaScript engine still moves it to the top of its scope – but it initializes the variable with a value of undefined. As such, until a is actually declared on the next line, its actual value won’t be assigned. Then, after declaration, we can finally log its value to the console: “a“.</p>
+    <p>જ્યારે ચલ a ને ફરકાવવામાં આવે છે, ત્યારે JavaScript એન્જિન હજુ પણ તેને તેના અવકાશની ટોચ પર લઈ જાય છે - પરંતુ તે અવ્યાખ્યાયિત મૂલ્ય સાથે ચલને આરંભ કરે છે. જેમ કે, જ્યાં સુધી a ને વાસ્તવમાં આગલી લાઇન પર જાહેર કરવામાં ન આવે, ત્યાં સુધી તેનું વાસ્તવિક મૂલ્ય અસાઇન કરવામાં આવશે નહીં. પછી, ઘોષણા પછી, અમે આખરે તેની કિંમત કન્સોલ પર લૉગ કરી શકીએ છીએ: “a“.</p>
+    <p>Now, what about variables declared with the let and const keywords? As it turns out, there are some slightly different behaviors declaring block-scoped variables as well.</p>
+    <p>હવે, let અને const કીવર્ડ સાથે જાહેર કરાયેલા ચલોનું શું? જેમ જેમ તે બહાર આવ્યું છે તેમ, બ્લોક-સ્કોપવાળા ચલોને પણ જાહેર કરતી કેટલીક થોડી અલગ વર્તણૂકો છે.</p>
+    
+    <h2>Variable hoisting with let and const.</h2>
+    <p>Similar to declaring a variable with var, the declaring a variable with let or const still sees the variable declaration hoisted to the top of its scope. However, rather than initializing that variable with a value (i.e., undefined, as shown above), the JavaScript engine forgoes that step entirely. As such, by not being initialized, the JavaScript interpreter will throw an error if we try to access the variable:</p>
+    <p>var સાથે વેરીએબલની ઘોષણા કરવા જેવું જ, let અથવા const સાથે વેરીએબલની ઘોષણા હજુ પણ વેરીએબલની ઘોષણાને તેના અવકાશની ટોચ પર લહેરાવેલી જુએ છે. જો કે, તે ચલને મૂલ્ય સાથે શરૂ કરવાને બદલે (એટલે ​​​​કે, અવ્યાખ્યાયિત, ઉપર બતાવ્યા પ્રમાણે), JavaScript એન્જિન તે પગલું સંપૂર્ણપણે છોડી દે છે. જેમ કે, આરંભ ન થવાથી, જાવાસ્ક્રિપ્ટ ઈન્ટરપ્રીટર ભૂલ કરશે જો આપણે વેરીએબલને એક્સેસ કરવાનો પ્રયાસ કરીશું:</p>
+
+    <details>
+      <summary>
+        Example
+      </summary>
+      <pre>
+        console.log(a); // ReferenceError: Cannot access 'a' before initialization
+        
+        console.log(b); // ReferenceError: b is not defined
+        
+        let a = "a";
+        
+        console.log(a); // "a"
+      </pre>
+    </details>
+    
+    <p>The reason why we see these errors, even though variable a is properly hoisted, is due to the variable being in the temporal dead zone (TDZ). That is, while the variable is in scope, we cannot access or use the variable at all before it is explicitly declared. This same behavior also applies when declaring a class with the class keyword:</p>
+    
+    <details>
+      <summary>
+        Example
+      </summary>
+      <pre> 
+        let instance = new MyClass(); // Cannot access 'MyClass' before initialization
+        
+        class MyClass {
+          // ...
+        }
+      </pre>
+    </details>
+    <p>Certain developers in the community may argue that declarations with let, const, or class are non-hoisting in the most strict sense.</p>
+    <p>Now that we’ve seen how different declarations can be hoisted, what significance does this have in code?</p>
+    
+    <h2>To hoist or not to hoist?</h2>
+    
+    <p>Hoisting is not explicitly defined in the ECMAscript specification, which describes the standards of JavaScript as a language. For the most part, you should consider hoisting as more of a default behavior of JavaScript rather than a feature. That is, rather than leveraging hoisting as a practical tool or design pattern in the scripts and applications you write, you should just be mindful of its characteristics as you continue to work with JavaScript.</p>
+    
+    <p>In certain code bases, for example, you might come across functions being used in business logic at the top of the script, while its declarations are left at the bottom of the script (something that AirBnb’s JavaScript Style Guide advises against). Though less common and probably only partially useful, know that this is all possible due to hoisting</p>
+    
+    <h2>Learn more about hoisting.</h2>
+    
+    <p>For more information about hoisting, declarations, and scope in JavaScript, check out these resources:</p>
+    
+    <div>
+      <ul>
+        <li>Statements and declarations on MDN</li>
+        <li>Hoisting on MDN</li>
+        <li>ES6 – JavaScript Improved</li>
+        <li>Object-Oriented JavaScript</li>
+      </ul>
+      
+      <p>
+        Or explore the Intermediate JavaScript Nanodegree program to master the most popular programming language in the world
+      </p>
+    </div>
+    
+  </details>
+  <details>
+    <summary>
+      Question And Answer
+    </summary>
+    <h3>2. How do you debug a JavaScript code?</h3>
+      <pre>
+        Step 1: Reproduce the bug.
+        Step 2: Get familiar with the Sources panel UI.
+        Step 3: Pause the code with a breakpoint.
+        Step 4: Step through the code.
+        Step 5: Set a line-of-code breakpoint.
+        Step 6: Check variable values. Method 1: The Scope pane. Method 2: Watch Expressions. ...
+        Step 7: Apply a fix.
+        Next steps.
+      </pre>
+  </details>
+
+    
+    
+  </body>
+  </html>

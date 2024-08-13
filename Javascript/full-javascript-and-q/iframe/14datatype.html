@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .summary{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <details>
+      <summary class="summary">
+        Data types
+
+      </summary>
+      <h3>1.Primetive Datatype</h3>
+      <p>The predefined data types provided by JavaScript language are known as primitive data types. Primitive data types are also known as in-built data types.</p>
+    <div>
+      <ul>
+        <li>Number: JavaScript numbers are always stored in double-precision 64-bit binary format IEEE 754. Unlike other programming languages, you don’t need int, float, etc to declare different numeric values.</li>
+        <li>String: JavaScript Strings are similar to sentences. They are made up of a list of characters, which is essentially just an “array of characters, like “Hello GeeksforGeeks” etc.</li>
+        <li>Boolean: Represent a logical entity and can have two values: true or false</li>
+        <li>Null: This type has only one value that is null.</li>
+        <li>Undefined: A variable that has not been assigned a value is undefined.</li>
+        <li>Symbol: Symbols return unique identifiers that can be used to add unique property keys to an object that won’t collide with keys of any other code that might add to the object</li>
+        <li>Symbol: Symbols return unique identifiers that can be used to add unique property keys to an object that won’t collide with keys of any other code that might add to the object.</li>
+      </ul>
+    </div>
+    <details>
+      <summary style="font-size: 15px;">
+        JavaScript Primitive Data Types Examples:
+      </summary>
+      
+      <h4>Number</h4>
+      <p>The number type in JavaScript contains both integer and floating-point numbers. Besides these numbers, we also have some ‘special-numbers’ in javascript that are: ‘Infinity’, ‘-Infinity’, and ‘NaN’. Infinity basically represents the mathematical ‘?’. The ‘NaN’ denotes a computational error.</p>
+    <pre>
+      let num = 2; // Integer 
+      let num2 = 1.3; // Floating point number
+      let num3 = Infinity; // Infinity
+      let num4 = 'something here too'/2; // NaN
+    </pre>
+
+    <h4>string</h4>
+    <p>A String in javascript is basically a series of characters that are surrounded by quotes. There are three types of quotes in Javascript, which are:</p>
+    <pre>
+      let str = "Hello There";
+      let str2 = 'Single quotes works fine';
+      let phrase = `can embed ${str}`;
+    </pre>
+    <h4>Boolean</h4>
+    <p>The boolean type has only two values: true and false. This data type is used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.</p>
+    <pre>
+      let isCoding = true; // yes
+      let isOld = false;      // no
+    </pre>
+    
+    <h4>Null</h4>
+    <p>The special null value does not belong to any of the default data types. It forms a separate type of its own which contains only the null value:</p>
+    <pre>
+      let age = null;
+    </pre>
+    <p>The ‘null’ data type basically defines a special value that represents ‘nothing’, ’empty’, or ‘value unknown’. Undefined Just like null, Undefined makes its own type. The meaning of undefined is ‘value is not assigned’.</p>
+    <pre>
+      let x;
+      console.log(x);  // undefined
+    </pre>
+  </details>
+    <h3>Non-Primitive Datatype</h3>
+    <p>The data types that are derived from primitive data types of the JavaScript language are known as non-primitive data types. It is also known as derived data types or reference data types.</p>
+    <div>
+      <ul>
+        <li>Object: It is the most important data type and forms the building blocks for modern JavaScript. We will learn about these data types in detail in further articles.</li>
+      </ul>
+      <ul>
+        <li>Arrey</li>
+      </ul>
+    </div>
+
+    
+  </details>
+    
+  <details>
+    <summary class="summary">
+    Dynamic and weak typing
+    </summary>
+    
+    <p>JavaScript is a dynamic language with dynamic types. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:</p> 
+    
+    <pre>
+      let foo = 42; // foo is now a number
+      foo = "bar"; // foo is now a string
+      foo = true; // foo is now a boolean
+    </pre>
+    
+    <p>JavaScript is also a weekly  typed lang, which means allows implicit type conversion when an operation involves mismatched type , instead of throwing type errors.</p>
+    
+    <pre>
+      const foo = 42; // foo is a number
+      const result = foo + "1"; // JavaScript coerces foo to a string, so it can be concatenated with the other operand
+      console.log(result); // 421
+      
+    </pre>
+    
+    
+    <pre>
+      <b>
+        Type	typeof return value	Object wrapper
+      </b>
+      Null	   "object"       	N/A
+      Undefined	   "undefined"    	N/A
+      Boolean      "boolean"      	Boolean
+      Number	   "number"       	Number
+      BigInt	   "bigint"	        BigInt
+      String	   "string"	        String
+      Symbol	   "symbol"        	Symbol
+      
+    </pre>
+    
+    
+    <h3>
+      <a href="#other coercions">other coercions</a>
+    </h3>
+    <p>
+      All data types, except Null, Undefined, and Symbol, have their respective coercion process. See
+      <a href="#string">string</a>
+      ,
+      <a href="#coercions">coercions</a>
+      ,
+      <a href="#boolean coercions">boolean coercions</a>
+      , and
+      <a href="#object coercions">object coercions</a>
+      for more details.
+      
+    </p>
+    <p>As you may have noticed, there are three distinct paths through which objects may be converted to primitives:</p>
+    <div>
+      <ul>
+        <li>Primitive coercion: [@@toPrimitive]("default") → valueOf() → toString()</li>
+        <li>Numeric coercion, number coercion, BigInt coercion: [@@toPrimitive]("number") → valueOf() → toString()</li>
+        <li>String coercion: [@@toPrimitive]("string") → toString() → valueOf()</li>
+      </ul>
+      
+      <p>In all cases, [@@toPrimitive](), if present, must be callable and return a primitive, while valueOf or toString will be ignored if they are not callable or return an object. At the end of the process, if successful, the result is guaranteed to be a primitive. The resulting primitive is then subject to further coercions depending on the context</p>
+      
+    </div>
+    
+  </details>
+    <details>
+      <summary class="summary">
+        Question And Answer
+      </summary>
+      <h3>1. What are the various data types that exist in JavaScript?</h3>
+      <p>In Javascript, there are five basic, or primitive, types of data. The five most basic types of data are strings, numbers, booleans, undefined, and null. We refer to these as primitive data types. A single variable can only store a single type of data.</p>     
+      <h3>2. What is the difference between Undefined and Null in JavaScript?</h3>
+      <p>In JavaScript, null and undefined are two distinct types that represent different values. By definition, undefined means a variable has been declared but has not yet been assigned a value, whereas null is an assignment value, meaning that a variable has been declared and given the value of null .</p>
+      <h3>3. What are the various data types that exist in JavaScript?</h3>
+      <p>JavaScript includes primitive and non-primitive data types. The primitive data types in JavaScript include string, number, boolean, undefined, null, and symbol. The non-primitive data type includes the object. A variable of primitive data type can contain only a single value.</p>
+      <h3>4. Primitive data types</h3>
+      <p>
+        Primitive data types, in computer programming, refer to the fundamental data types provided by a programming language. These types are typically directly supported by the programming language and represent basic values.
+        
+        Here are some common primitive data types found in many programming languages:
+        
+        Integer: Represents whole numbers without any decimal points. Depending on the language, integers can be further categorized based on their size (e.g., int, long, short).
+        
+        Floating-point: Represents numbers with decimal points. Typically represented as float (single-precision) or double (double-precision).
+        
+        Boolean: Represents a logical value indicating true or false.
+        
+        Character: Represents a single character. This can include letters, digits, special characters, etc. Often represented as char.
+        
+        String: Represents a sequence of characters. Strings are not primitive in all languages, but they behave like primitive types in many contexts.
+        
+        Byte: Represents a unit of digital information. Typically, it's a group of eight bits.
+        
+        Short: Represents a small range of integers.
+        
+        Long: Represents a larger range of integers.
+        
+        Double: Represents double-precision floating-point numbers.
+        
+        Float: Represents single-precision floating-point numbers.
+        
+        These primitive data types are used to store and manipulate basic values within programs. Each data type has its own range of values and precision, and they are used according to the requirements of the program.</p>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+      
+    </body>
+</html>

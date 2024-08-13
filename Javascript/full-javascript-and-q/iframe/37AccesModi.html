@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body  style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+
+    <p>Access modifiers in JavaScript play a significant role in controlling the visibility and accessibility of class
+        members. Although JavaScript is not traditionally an object-oriented programming (OOP) language, the
+        introduction of classes and access modifiers in ECMAScript 6 (ES6) allowed developers to implement OOP
+        principles into their applications.</p>
+    Types of Access Modifiers
+    <ul>
+        <li> Public (default)</li>
+        <li> Private</li>
+        <li> Protected</li>
+    </ul>   
+    <script>
+        class AccessModi {
+            #DataMember = "value of Public Data Member"
+            publicDatamember = "value of Public Data Member"
+            memberFunction(){
+                // DataMember = "value of Public Data Member"
+                // let DataMember = "value of Public Data Member"
+                // console.log("Inside function calling datamember and its value is "+this.DataMember);
+                console.log("Inside function calling datamember and its value is "+this.#DataMember);
+                console.log("Inside function calling Public datamember and its value is "+this.publicDatamember);
+            }
+            otherMEmberFunc(){
+                
+                console.log("Inside function calling datamember and its value is "+this.#DataMember);
+            }
+        }
+        class AccessModiChild extends AccessModi {
+            childMemberFunction(){
+                // console.log("Inside function calling datamember and its value is "+this.#DataMember); //Private field '#DataMember' must be declared in an enclosing class
+                console.log("Inside function calling Public datamember and its value is "+this.publicDatamember);
+            }
+        }
+
+        const ObjectOfAccessModi = new AccessModiChild();
+        console.log(ObjectOfAccessModi.DataMember);
+        // console.log(ObjectOfAccessModi.memberFunction);
+        ObjectOfAccessModi.memberFunction();
+        ObjectOfAccessModi.otherMEmberFunc();
+    </script>
+</body>
+
+</html>

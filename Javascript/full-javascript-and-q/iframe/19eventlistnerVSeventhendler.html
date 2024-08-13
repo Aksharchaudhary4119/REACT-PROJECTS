@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        function hitme() {
+            alert("Btn Click Success!!!")
+        }
+        document.getElementById("btn").addEventListener("click",function () {
+            alert("Btn Click addEventListener Success!!!")
+        })
+    </script>
+</head>
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    
+
+    <h2>What is event</h2>
+    <p> Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur.</p>
+    <p> ઇવેન્ટ્સ એવી વસ્તુઓ છે જે તમે પ્રોગ્રામિંગ કરી રહ્યાં છો તે સિસ્ટમમાં થાય છે — જ્યારે કોઈ ઘટના બને ત્યારે સિસ્ટમ અમુક પ્રકારના સિગ્નલ ઉત્પન્ન કરે છે (અથવા "ફાયર") કરે છે, અને એક એવી મિકેનિઝમ પ્રદાન કરે છે કે જેના દ્વારા ઑટોમૅટિક રીતે પગલાં લઈ શકાય (એટલે ​​​​કે, અમુક કોડ ચાલી રહ્યો છે) જ્યારે ઇવેન્ટ થાય છે. ઇવેન્ટ્સ બ્રાઉઝર વિન્ડોની અંદર ફાયર કરવામાં આવે છે, અને તેમાં રહેલ ચોક્કસ આઇટમ સાથે જોડાયેલ હોય છે. આ એકલ તત્વ, તત્વોનો સમૂહ, વર્તમાન ટેબમાં લોડ થયેલો HTML દસ્તાવેજ અથવા સમગ્ર બ્રાઉઝર વિન્ડો હોઈ શકે છે. ત્યાં ઘણી વિવિધ પ્રકારની ઘટનાઓ બની શકે છે.</p>
+
+    <details>
+        <summary>
+            Example
+        </summary>
+
+        <pre>
+            <table class="alt">
+                <tbody><tr>
+                <th>Event Performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                <td>click</td>
+                <td>onclick</td>
+                <td>When mouse click on an element</td>
+                </tr>
+                <tr>
+                <td>mouseover</td>
+                <td>onmouseover</td>
+                <td>When the cursor of the mouse comes over the element</td>
+                </tr>
+                <tr>
+                <td>mouseout</td>
+                <td>onmouseout</td>
+                <td>When the cursor of the mouse leaves an element</td>
+                </tr>
+                <tr>
+                <td>mousedown</td>
+                <td>onmousedown</td>
+                <td>When the mouse button is pressed over the element</td>
+                </tr>
+                <tr>
+                <td>mouseup</td>
+                <td>onmouseup</td>
+                <td>When the mouse button is released over the element</td>
+                </tr>
+                <tr>
+                <td>mousemove</td>
+                <td>onmousemove</td>
+                <td>When the mouse movement takes place.</td>
+                </tr>
+                </tbody></table>
+
+    
+                    <table class="alt">
+                <tbody><tr>
+                <th>Event Performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                <td>Keydown &amp; Keyup</td>
+                <td>onkeydown &amp; onkeyup</td>
+                <td>When the user press and then release the key</td>
+                </tr>
+                </tbody></table>
+
+
+                        <table class="alt">
+               <tbody><tr>
+               <th>Event Performed</th>
+               <th>Event Handler</th>
+               <th>Description</th>
+               </tr>
+               <tr>
+               <td>focus</td>
+               <td>onfocus</td>
+               <td>When the user focuses on an element</td>
+               </tr>
+               <tr>
+               <td>submit</td>
+               <td>onsubmit</td>
+               <td>When the user submits the form</td>
+               </tr>
+               <tr>
+               <td>blur</td>
+               <td>onblur</td>
+               <td>When the focus is away from a form element</td>
+               </tr>
+               <tr>
+               <td>change</td>
+               <td>onchange</td>
+               <td>When the user modifies or changes the value of a form element</td>
+               </tr>
+               </tbody></table>
+
+            <table class="alt">
+                <tbody><tr>
+                <th>Event Performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                <td>load</td>
+                <td>onload</td>
+                <td>When the browser finishes the loading of the page</td>
+                </tr>
+                <tr>
+                <td>unload</td>
+                <td>onunload</td>
+                <td>When the visitor leaves the current webpage, the browser unloads it</td>
+                </tr>
+                <tr>
+                <td>resize</td>
+                <td>onresize</td>
+                <td>When the visitor resizes the window of the browser</td>
+                </tr>
+                </tbody></table>
+        </pre>
+    </details>
+
+        <!-- <script>
+        function hitme() {
+            alert("Btn Click Success!!!")
+        }
+        document.getElementById("btn").addEventListener("click",function () {
+            alert("Btn Click addEventListener Success!!!")
+        })
+    </script> -->
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body  style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+    <pre>
+        The this keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where this refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
+        આ કીવર્ડ તે સંદર્ભનો ઉલ્લેખ કરે છે જ્યાં કોડનો ટુકડો, જેમ કે ફંક્શનનું મુખ્ય ભાગ, ચાલવાનું માનવામાં આવે છે. મોટેભાગે, તેનો ઉપયોગ ઑબ્જેક્ટ મેથડમાં થાય છે, જ્યાં આ તે ઑબ્જેક્ટનો ઉલ્લેખ કરે છે જેની સાથે પદ્ધતિ જોડાયેલ છે, આમ તે જ પદ્ધતિને વિવિધ ઑબ્જેક્ટ પર ફરીથી ઉપયોગમાં લેવાની મંજૂરી આપે છે.
+
+
+
+        The value of this in JavaScript depends on how a function is invoked (runtime binding), not how it is defined. When a regular function is invoked as a method of an object (obj.method()), this points to that object. When invoked as a standalone function (not attached to an object: func()), this typically refers to the global object (in non-strict mode) or undefined (in strict mode). The Function.prototype.bind() method can create a function whose this binding doesn't change, and methods apply() and call() can also set the this value for a particular call.
+        JavaScript માં આનું મૂલ્ય ફંક્શનને કેવી રીતે બોલાવવામાં આવે છે તેના પર આધાર રાખે છે (રનટાઇમ બંધનકર્તા), નહીં કે તે કેવી રીતે વ્યાખ્યાયિત થાય છે. જ્યારે નિયમિત ફંક્શનને ઑબ્જેક્ટ (obj.method()) ની પદ્ધતિ તરીકે બોલાવવામાં આવે છે, ત્યારે આ ઑબ્જેક્ટ તરફ નિર્દેશ કરે છે. જ્યારે સ્ટેન્ડઅલોન ફંક્શન તરીકે બોલાવવામાં આવે છે (ઓબ્જેક્ટ સાથે જોડાયેલ નથી: func()), આ સામાન્ય રીતે વૈશ્વિક ઑબ્જેક્ટ (નોન-સ્ટ્રક્ટ મોડમાં) અથવા અવ્યાખ્યાયિત (કડક મોડમાં) નો સંદર્ભ આપે છે. Function.prototype.bind() પદ્ધતિ એક ફંક્શન બનાવી શકે છે જેનું આ બંધન બદલાતું નથી, અને પદ્ધતિઓ લાગુ() અને call() પણ ચોક્કસ કૉલ માટે આ મૂલ્ય સેટ કરી શકે છે.
+
+
+
+        Arrow functions differ in their handling of this: they inherit this from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own this binding. Therefore, their this value cannot be set by bind(), apply() or call() methods, nor does it point to the current object in object methods.
+        એરો ફંક્શન્સ આના તેમના હેન્ડલિંગમાં ભિન્ન છે: તેઓ જ્યારે વ્યાખ્યાયિત કરવામાં આવે ત્યારે પેરેંટ સ્કોપમાંથી આ વારસામાં મેળવે છે. આ વર્તણૂક એરો ફંક્શનને કૉલબૅક્સ અને સંદર્ભ સાચવવા માટે ખાસ કરીને ઉપયોગી બનાવે છે. જો કે, એરો ફંક્શનનું પોતાનું આ બંધનકર્તા નથી. તેથી, તેમનું આ મૂલ્ય bind(), apply() અથવા call() પદ્ધતિઓ દ્વારા સેટ કરી શકાતું નથી, કે તે ઑબ્જેક્ટ પદ્ધતિઓમાં વર્તમાન ઑબ્જેક્ટ તરફ નિર્દેશ કરતું નથી.
+
+    
+    
+        What the hell is this?
+        If you are coming from another language, which is Object-Oriented, such as Java, you are no doubt familiar with the concept of this. This keyword is used inside of a class and refers to the current instance. No more, no less.
+        જો તમે બીજી ભાષામાંથી આવો છો, જે ઑબ્જેક્ટ-ઓરિએન્ટેડ છે, જેમ કે જાવા, તો તમે નિઃશંકપણે આના ખ્યાલથી પરિચિત છો. આ કીવર્ડનો ઉપયોગ વર્ગની અંદર થાય છે અને વર્તમાન દાખલાનો સંદર્ભ આપે છે. વધુ નહીં, ઓછું નહીં.
+
+
+        
+        In Javascript, this is yet another concept, which behaves in an unexpected way. Like other concepts such as new operator or classes, it tricks you into making some false assumptions based on concepts which you know from other languages. Because the syntax and naming are the same or very similar, yet the concept is different. What's more, its behavior is not the same depending on whether you are in the strict mode or not.
+        જાવાસ્ક્રિપ્ટમાં, આ એક અન્ય ખ્યાલ છે, જે અનપેક્ષિત રીતે વર્તે છે. નવા ઓપરેટર અથવા વર્ગો જેવા અન્ય વિભાવનાઓની જેમ, તે તમને અન્ય ભાષાઓમાંથી જાણતા ખ્યાલોના આધારે કેટલીક ખોટી ધારણાઓ બનાવવા માટે યુક્તિ કરે છે. કારણ કે વાક્યરચના અને નામકરણ સમાન અથવા ખૂબ સમાન છે, છતાં ખ્યાલ અલગ છે. એટલું જ નહીં, તમે કડક મોડમાં છો કે નહીં તેના આધારે તેનું વર્તન સમાન નથી.
+
+
+        
+        Every time a function is invoked, this is assigned a reference to an object based on how the function was called. Is it a regular function? A method called on an object? Fat arrow function? Method of an ES6 class? That's the key to understanding the topic. What's confusing about this is that the very same function can have a different value of this based on circumstances. Turns out that this does not depend on the function itself but rather on how the function is called. The same function will have different this when called as a method of an object and when provided as a callback function. You need to be careful because the functions can be passed around and in such case, this may be different from what you expected.
+        દર વખતે જ્યારે ફંક્શનને બોલાવવામાં આવે છે, ત્યારે આ ફંક્શનને કેવી રીતે બોલાવવામાં આવ્યું તેના આધારે ઑબ્જેક્ટનો સંદર્ભ સોંપવામાં આવે છે. શું તે નિયમિત કાર્ય છે? ઑબ્જેક્ટ પર કહેવાતી પદ્ધતિ? ફેટ એરો ફંક્શન? ES6 વર્ગની પદ્ધતિ? તે વિષયને સમજવાની ચાવી છે. આ વિશે ગૂંચવણમાં મૂકે છે તે એ છે કે સંજોગોના આધારે સમાન કાર્યમાં આનું અલગ મૂલ્ય હોઈ શકે છે. તારણ આપે છે કે આ ફંક્શન પર આધારિત નથી પરંતુ ફંક્શનને કેવી રીતે બોલાવવામાં આવે છે તેના પર આધારિત છે. જ્યારે ઑબ્જેક્ટની પદ્ધતિ તરીકે બોલાવવામાં આવે અને કૉલબૅક ફંક્શન તરીકે પ્રદાન કરવામાં આવે ત્યારે સમાન ફંક્શન આમાં અલગ હશે. તમારે સાવચેત રહેવાની જરૂર છે કારણ કે કાર્યો આસપાસ પસાર થઈ શકે છે અને આવા કિસ્સામાં, આ તમારી અપેક્ષા કરતા અલગ હોઈ શકે છે.
+
+
+    </pre>
+    <img src="JavaScript-this.png" width="50%" alt="">
+    <script>
+
+        // class ExampleOfThisForBooks{
+
+
+        //     authorName = "Chetanbhai Bhagu" // data member
+        //     twoIdiots(){ 
+        //         // let authorName = "Chetanbhai Bhagu"
+        //         // authorName
+        //         return "Story of twoIdiots written by"+this.authorName 
+        //     }
+        //     threestaes(){ 
+        //         return "Story of threestaes written by"+this.authorName 
+        //     }
+        //     southMovie(){
+        //         return "Story of southMovie "+this.twoIdiots()+this.threestaes() 
+        //     }
+        // }
+
+        // Obj = new ExampleOfThisForBooks
+        // // console.log(Obj.twoIdiots()); 
+        // console.log(Obj.southMovie()); 
+
+
+
+        class ExampleOfThisForBooks {
+
+            authorName = "Chetanbhai Bhagu" // data member
+            constructor(name){
+                this.authorName = name
+
+            }
+            twoIdiots() {
+                // let authorName = "Chetanbhai Bhagu"
+                // authorName
+                return "Story of twoIdiots written by" + this.authorName
+            }
+            threestaes() {
+                return "Story of threestaes written by" + this.authorName
+            }
+            southMovie() {
+                return "Story of southMovie " + this.twoIdiots() + this.threestaes()
+            }
+        }
+
+        Obj = new ExampleOfThisForBooks("ranji")
+        // console.log(Obj.twoIdiots()); 
+        console.log(Obj.southMovie());
+        Obj2 = new ExampleOfThisForBooks("chitanjivi")
+        // console.log(Obj.twoIdiots()); 
+        console.log(Obj2.southMovie());
+
+
+        class crud{
+            dbConnection = ""
+            constructor(dbname){this.dbConnection = dbname}
+            select(){}
+            insert(){}
+            update(){}
+            delete(){}
+        }
+
+        let Project1 = new crud("Project 1 database")
+        let Project2 = new crud("Project 2 database")
+        let Project3 = new crud("Project 3 database")
+
+    </script>
+
+</body>
+
+</html>

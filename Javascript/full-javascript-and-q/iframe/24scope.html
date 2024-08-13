@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .summary{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="color: aqua; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+
+    <details>
+        <summary class="summary">
+            Scope
+        </summary>
+    
+
+    <p>Scope determines the accessibility (visibility) of variables.</p>
+
+    <p>JavaScript variables have 3 types of scope:</p>
+    <ul>
+        <li> Block scope</li>
+        <li> Function scope</li>
+        <li> Global scope</li>
+    </ul>
+    <h3>Block Scope</h3>
+
+    <p> Before ES6 (2015), JavaScript variables had only Global Scope and Function Scope.</p>
+    <p> ES6 introduced two important new JavaScript keywords: let and const.</p>
+    <p> These two keywords provide Block Scope in JavaScript.</p>
+    <p> Variables declared inside a { } block cannot be accessed from outside the block:</p>
+    <pre>
+        {
+            let x = 2;
+        }
+        // x can NOT be used here
+        Variables declared with the var keyword can NOT have block scope.
+        
+        Variables declared inside a { } block can be accessed from outside the block.
+        
+        Example
+        {
+            var x = 2;
+        }
+        // x CAN be used here
+    </pre>
+    <h3>Local Scope</h3>
+    <p>Variables declared within a JavaScript function, are LOCAL to the function:</p>
+    <pre>
+        // code here can NOT use carName
+
+        function myFunction() {
+            let carName = "Volvo";
+            // code here CAN use carName
+        }
+
+        // code here can NOT use carName
+    </pre>
+    <p> Local variables have Function Scope:</p>
+    <p> They can only be accessed from within the function.</p>
+    <p> Since local variables are only recognized inside their functions, variables with the same name can be used in
+        different functions.</p>
+    <p> Local variables are created when a function starts, and deleted when the function is completed.</p>
+
+    <h3>Function Scope</h3>
+    <p> JavaScript has function scope: Each function creates a new scope.</p>
+
+    <p> Variables defined inside a function are not accessible (visible) from outside the function.</p>
+
+    <p> Variables declared with var, let and const are quite similar when declared inside a function.</p>
+
+    <p> They all have Function Scope:</p>
+    <pre>
+        function myFunction() {
+          var carName = "Volvo";   // Function Scope
+        }
+        function myFunction() {
+          let carName = "Volvo";   // Function Scope
+        }
+        function myFunction() {
+          const carName = "Volvo";   // Function Scope
+        }
+    </pre>
+    <h3>Global JavaScript Variables</h3>
+    <p>A variable declared outside a function, becomes GLOBAL.</p>
+    <pre>
+        Example
+        let carName = "Volvo";
+        // code here can use carName
+        
+        function myFunction() {
+        // code here can also use carName
+        }
+    </pre>
+    <h3>Global Scope</h3>
+
+    <p> Variables declared Globally (outside any function) have Global Scope.</p>
+
+    <p> Global variables can be accessed from anywhere in a JavaScript program.</p>
+
+    <p> Variables declared with var, let and const are quite similar when declared outside a block.</p>
+
+    <p> They all have Global Scope:</p>
+    <h2>Warning</h2>
+
+    <p>Do NOT create global variables unless you intend to.</p>
+    <p> Your global variables (or functions) can overwrite window variables (or functions).</p>
+    <p> Any function, including the window object, can overwrite your global variables and functions.</p>
+</details>
+
+    <script>
+        "use strict";
+        const v = "Hi! I'm a strict mode script!";
+        let GlobalScope = "GlobalScope"
+        GlobalScp = "GlobalScp"
+        function accessvar(params) {
+            let data = "Something"
+            var functionalScope = "functionalScope  data"
+            console.log(GlobalScope);
+        }
+        // console.log(functionalScope);
+        // console.log(data);
+        console.log(GlobalScope);
+    </script>
+
+    <details>
+        <summary class="summary">
+            Question Ans Answer
+        </summary>
+        <h2>1. What are the scopes of a variable in JavaScript?</h2>
+        <p>Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: Global variables are those declared outside of a block. Local variables are those declared inside of a block.</p>
+        <p>જાવાસ્ક્રિપ્ટમાં સ્કોપ કોડના વર્તમાન સંદર્ભનો સંદર્ભ આપે છે, જે JavaScript માટે ચલોની સુલભતા નક્કી કરે છે. બે પ્રકારના અવકાશ સ્થાનિક અને વૈશ્વિક છે: વૈશ્વિક ચલો તે છે જે બ્લોકની બહાર જાહેર કરવામાં આવે છે. લોકલ વેરીએબલ્સ તે છે જે બ્લોકની અંદર જાહેર કરવામાં આવે છે.</p>
+
+        <h2>2. Characteristics of javascript strict-mode</h2>
+        <p>Eliminates some JavaScript silent errors by changing them to throw errors.
+            Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode.</p>
+            <p>કેટલીક JavaScript સાયલન્ટ ભૂલોને ભૂલો ફેંકવા માટે બદલીને દૂર કરે છે.
+                તે ભૂલોને સુધારે છે જે JavaScript એન્જિન માટે ઑપ્ટિમાઇઝેશન કરવાનું મુશ્કેલ બનાવે છે: કડક મોડ કોડને કેટલીકવાર સમાન કોડ કરતાં વધુ ઝડપી ચલાવવા માટે બનાવી શકાય છે જે કડક મોડ નથી.</p>
+
+        <h2>3. currying in JavaScript (with examples)</h2> 
+        <p>Currying in JavaScript is a method that takes one argument at a time and returns a new function that expects the next argument. Using currying, higher-order functions can be created in functional programming. Using Currying, we can also modify the DOM version in JavaScript.</p>
+        <p>જાવાસ્ક્રિપ્ટમાં કરીંગ એ એક પદ્ધતિ છે જે એક સમયે એક દલીલ લે છે અને એક નવું કાર્ય આપે છે જે આગલી દલીલની અપેક્ષા રાખે છે. કરીંગનો ઉપયોગ કરીને, ફંક્શનલ પ્રોગ્રામિંગમાં ઉચ્ચ-ક્રમના કાર્યો બનાવી શકાય છે. Currying નો ઉપયોગ કરીને, અમે JavaScript માં DOM સંસ્કરણને પણ સંશોધિત કરી શકીએ છીએ.</p> 
+         <img style="width: 600px;" src="./images/currying-in-javascript-thumbnail (1).webp" alt=""> 
+        
+        <h2>4. Role of deferred scripts</h2>
+        <p>Because of the blocking nature this circumstance produces, loading times are slow. The boolean attributes Defer have been introduced to the script tag as a solution to this problem. While ensuring that all scripts are downloaded, this attribute will not actually execute any scripts until the DOM is ready.</p>
+        <p>અવરોધિત પ્રકૃતિને કારણે આ સંજોગો ઉત્પન્ન થાય છે, લોડિંગનો સમય ધીમો છે. આ સમસ્યાના ઉકેલ તરીકે સ્ક્રીપ્ટ ટેગમાં બુલિયન એટ્રીબ્યુટ્સ Defer રજૂ કરવામાં આવ્યા છે. બધી સ્ક્રિપ્ટો ડાઉનલોડ થઈ ગઈ છે તેની ખાતરી કરતી વખતે, આ એટ્રિબ્યુટ ખરેખર DOM તૈયાર ન થાય ત્યાં સુધી કોઈપણ સ્ક્રિપ્ટને એક્ઝિક્યુટ કરશે નહીં.</p>
+
+    </details>
+</body>
+
+</html>

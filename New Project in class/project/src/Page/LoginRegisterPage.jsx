@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styles from './login.css';
+import './login.css';
 
 const LoginRegisterPage = () => {
     const [changeForm,setChangeForm] = useState(true)
     // const [data,setData] = useState('');
     const [data,setData] = useState({});
-    const [password,setPassword] = useState();
+    // const [password,setPassword] = useState();
     return (
         <>
             <section className="user">
