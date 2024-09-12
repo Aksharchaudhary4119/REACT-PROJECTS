@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "uname": "admin",
+      "email": "admin@mail.com",
+      "pass": "123",
+      "id": 1,
+      "role": 1
+    },
+    {
+      "uname": "testing",
+      "email": "test@mail.com",
+      "pass": "123",
+      "role": 1,
+      "id": 2
+    },
+    {
+      "role": "2",
+      "uname": "new ttttt",
+      "pass": "456",
+      "email": "data@mail.com",
+      "mobile": "1234567898",
+      "id": 3
+    },
+    {
+      "role": "2",
+      "uname": "newdata",
+      "pass": "entry",
+      "email": "for@testing.com",
+      "mobile": "4561237898",
+      "id": 4
+    },
+    {
+      "role": "2",
+      "uname": "checking",
+      "pass": "456",
+      "email": "mail@mail.com",
+      "mobile": "9879879878",
+      "id": 5
+    },
+    {
+      "role": "2",
+      "uname": "test",
+      "pass": "checking",
+      "email": "mail@mmm",
+      "mobile": "777777",
+      "id": 6
+    },
+    {
+      "role": "2",
+      "uname": "asdf",
+      "pass": "jk",
+      "email": "lk",
+      "mobile": "987987",
+      "id": 7
+    },
+    {
+      "role": "2",
+      "uname": "data",
+      "pass": "456",
+      "email": "data@mail.com",
+      "mobile": "9876543215",
+      "id": 8
+    }
+  ]
+}
