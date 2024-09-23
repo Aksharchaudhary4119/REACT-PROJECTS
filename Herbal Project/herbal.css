@@ -3,6 +3,15 @@
     box-sizing: border-box;
     padding: 0;
 }
+.col-25{
+  width: 25%;
+}
+.col-14{
+  width: 14%;
+}
+body{
+  background-color: rgba(0, 33, 27, 1);
+}
 .header {
     /* background-color: #000000; */
     height: 80px;
@@ -18,6 +27,10 @@
 .jcc {
     display: flex;
     align-items: center;
+}
+
+.jce{
+  justify-content: space-evenly;
 }
 
 .jsc {
@@ -59,13 +72,14 @@
   
 }
 .i-2{
-  color: rgba(82, 248, 98, 1);
+  color: #52f862;
   padding-right: 9px;
 }
 
 .links {
     font-size: 19px;
     text-align: center;
+    padding: 1rem 0 1rem 0;
   }
   
   .links ul li {
@@ -75,18 +89,55 @@
   }
   
   .links ul li a {
-    color: rgb(248, 248, 248);
+    /* color: rgb(248, 248, 248);
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; */
+      color: #FFF;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
   }
-  .links ul li a:hover{
-      color: #39FF14;
-      border-bottom: 1px solid;
+
+  .links a:before, .links a:after{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+
   }
+
+.links a:before
+  {
+      left: 0px;
+      top: 0px;
+  }
+  
+
+  .links a:after
+  {
+      right: 0px;
+      bottom: 0px;
+  }
+
+.links a:hover:before, .links a:hover:after
+  {
+      opacity: 1;
+      height: 2px;
+      width: 100%;
+  }
+
   .main-header{
     background: rgba(0, 33, 27, 1);
-}
-.marquee{
+  }
+  
+  .marquee{
     background-color: black;
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -94,16 +145,11 @@
     font-weight: 400;
     line-height: 66.56px;
     text-align: center;
-}
-.col-50{
+  }
+  .col-50{
     width: 50%;
 }
-.sec-2{
-    background: rgba(40, 40, 40, 1);
-    /* height: 600px; */
-    /* background-image: url(./IMG/main-background-removebg-preview.png);
-    background-repeat: no-repeat; */
-}
+
 .img img{
     border-radius: 2rem;
     margin: 5rem 2rem 6rem 3rem;
@@ -124,61 +170,26 @@
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-/* .sec-2-btn button{
-    color:white;
-    padding: 1rem 2.5rem;
-    background: rgba(255, 255, 255, 0.128);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: 1rem;
-    font-size: 1rem;
-    margin: 2rem 0 6rem 15rem;
-    
-}
-.sec-2-btn button:hover{
-    color: black;
-    background-color: rgba(82, 248, 98, 1);
-} */
-.sec-3{
-    background-color: rgba(40, 40, 40, 1);
-    height: 700px;
-}
-.bg-3{
-    background-color: white;
-    width: 1300px;
-    margin-left: 3.3rem;
-    /* align-items: center; */
-}
-.sec-3-h1  {
-    color: black;
-    font-size: 4.5rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-}
-.sec-3-p{
-    color: black;
-    text-align: center;
-    font-size: 1rem;
-    width: 600px;
-}
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
     min-height: 100vh;
-    background: #27272c;
   }
   
   button {
     position: relative;
+    /* position: fixed; */
     background: #444;
     color: #fff;
     text-decoration: none;
@@ -279,6 +290,631 @@
     margin: 1rem 0 2rem 7.7rem;
   }
 
+  .bottal-img{
+    position: absolute;
+  }
+
+  .absolute{
+    position: relative;
+  }
+
+  .bg-3{
+    padding: 2rem 0 5rem 0;
+    background-color: white;
+    width: 1400px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .forleaf{
+    display: flex;
+  }
+
+  .leaf1{
+    position: relative;
+    left: 28rem;
+  }
+
+  .leaf{
+    position: absolute;
+    left: 54rem;
+  }
+  .sec-3-p{
+    width:810px ;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 17.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+
+  .sec-3-h1  {
+      color: black;
+      font-size: 4.5rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding: 0.5rem 0 0 0;
+  }
+
+  .forleaf{
+    display: flex;
+  }
+
+  .leaf2{
+    position: relative;
+    left: 24rem;
+    align-items: center;
+  }
+  .leaf-2{
+    position: absolute;
+    left: 61rem;
+  }
+    .sec-4-h1  {
+      color: white;
+      font-size: 4.5rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      /* padding-left: 1rem; */
+  }
+  .col-25{
+    width: 25%;
+  }
+  .sec-4-img img{
+    border-radius: 1rem;
+  }
+  .sect-4{
+    margin: 5rem 0 4rem 0;
+  }
+  
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+  
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    border-radius: 1rem;
+  }
+  
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
+  
+  .hovereffect h2 {
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background-color: transparent;
+    color: #FFF;
+    padding: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+  
+  .hovereffect a, .hovereffect p {
+    color: #FFF;
+    padding: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+  
+  .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  .sec-5{
+    background-color: #ffffff;
+    width: 1400px;
+    border-radius: 20px;
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 2rem;
+  }
+  .sec-5-h1  {
+    color: black;
+    font-size: 4.5rem;
+    padding-top: 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    /* margin: 0 0 1rem 0; */
+    /* padding-left: 1rem; */
+}
+.forleaf{
+  display: flex;
+}
+
+.leaf3{
+  position: relative;
+  left: 18rem;
+}
+.leaf-3{
+  position: absolute;
+  left: 68.5rem;
+}
+
+.sec-5-img{
+  padding: 3rem 0 0 4rem;
+}
+
+.sec-5-p{
+  font-size: 4rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  padding:0 0 1rem 4rem;
+}
+.sec-5-p1{
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding:0 0 1rem 4rem;
+}
+.sec-5-p2{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  padding:0 0 1rem 4rem;
+  width: 450px;
+}
+
+
+  button {
+    position: relative;
+    /* position: fixed; */
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    color: var(--clr);
+    /* box-shadow: 0 0 35px var(--clr); */
+    animation: box 3s infinite;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
+  .btn-2{
+    margin: 1rem 0 0 2rem;
+  }
+
+  .sec-6-img{
+    margin: 3rem 0 3rem 2rem;
+  }
+
+  .sec-6-h1  {
+    color: white;
+    font-size: 4.5rem;
+    padding-top: 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+.forleaf{
+  display: flex;
+}
+
+.leaf4{
+  position: relative;
+  left: 22rem;
+}
+.leaf-4{
+  position: absolute;
+  left: 62rem;
+}
+
+.sec-6-text p{
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 20px 0 0 0;
+}
+
+
+.sec-6-ul ul li{
+  padding: 0 0 0 0;
+  font-size: 1.5rem;
+  margin-left: 1.2rem;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.forleaf{
+  display: flex;
+}
+
+.leaf5{
+  position: relative;
+  left: 23rem;
+  align-items: center;
+}
+.leaf-5{
+  position: absolute;
+  left: 62rem;
+}
+  .sec-7-h1  {
+    color: white;
+    font-size: 4.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.col-25{
+  width: 25%;
+}
+.sec-7-img img{
+  border-radius: 1rem;
+}
+.sect-7{
+  margin: 5rem 0 4rem 0;
+}
+/* 
+.btn-7 h6{
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(102, 90, 90);
+  color: white;
+  font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 2rem 0 0 0;
+}
+.btn-7 h6:hover{
+  color: #52f862 ;
+  background-color: #ffffff;
+
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+    min-height: 100vh;
+  }
+  
+  button {
+    position: relative;
+    /* position: fixed; */
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    color: var(--clr);
+    /* box-shadow: 0 0 35px var(--clr); */
+    animation: box 3s infinite;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+
+
+  .btn-7{
+    margin-top: 1.5rem;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
+
+  .sec-8{
+    background-color: white;
+    border-radius: 10px;
+    width: 1400px;
+    padding: 2rem 0 3rem 0;
+  }
+  
+  .forleaf{
+    display: flex;
+  }
+
+  .leaf6{
+    position: relative;
+    left: 29rem;
+    align-items: center;
+  }
+  .leaf-6{
+    position: absolute;
+    left: 51.5rem;
+  }
+    .sec-8-h1  {
+      color: black;
+      font-size: 4.5rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding-bottom: 3rem;
+  }
 
   
+  .card {
+    text-align:center;
+     /* margin: 0 20px 0 20px; */
+     /* padding: 1rem; */
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    background: white;
+   box-shadow: 0px 0px 0px grey;
+    -webkit-transition:  box-shadow .6s ease-out;
+       box-shadow: .8px .9px 3px grey;
   
+  }
+  
+.sect-8{
+  color: #27b335;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+  .text-8 p{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 0 1rem 0;
+  }
+  .card:hover{ 
+       box-shadow: 1px 8px 20px grey;
+      -webkit-transition:  box-shadow .6s ease-in;
+    }
+    .col-25{
+      margin: 0 3rem 0 3rem;
+    }
+
+    .card-8{
+      margin: 0 0 0 3rem;
+    }
+   
+    
+  .forleaf{
+    display: flex;
+  }
+
+  .leaf7{
+    position: relative;
+    left: 26.5rem;
+    align-items: center;
+    padding-top:1rem ;
+  }
+  .leaf-7{
+    position: absolute;
+    left: 59rem;
+  }
+  .sec-9{
+    margin: 2rem 0 1rem 0;
+  }
+    .sec-9-h1  {
+      color: white;
+      font-size: 3.5rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding-bottom: 3rem;
+  }
+
+  .sect-9{
+    background-color: white;
+  }
+  .col-14 {
+    margin: 0 5rem 0 0.5rem;
+  }
+
+
+
+
+
+
