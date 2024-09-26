@@ -130,25 +130,16 @@ body{
       width: 100%;
   }
 
-  .main-header{
-    background: rgba(0, 33, 27, 1);
-  }
-  .main-text h1{
+  .main-text{
     color: white;
-    font-size: 4rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align  : center ;
-    padding: 1rem 0 1rem 0;
-
+    font-size: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 1rem 0 0 0;
   }
 
-  
-  .bottal-img{
-    position: absolute;
-  }
-
-  .absolute{
-    position: relative;
+  .img-1 img{
+    padding-left: 28.5rem;
   }
 
   .forleaf{
@@ -157,96 +148,92 @@ body{
 
   .leaf1{
     position: relative;
-    left: 28rem;
+    left: 27rem;
   }
 
   .leaf{
     position: absolute;
-    left: 54rem;
-  }
-  .sec-3-p{
-    width:810px ;
-    font-size: 1.5rem;
-    margin: 1rem 0 0 17.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+    left: 55.5rem;
   }
   
 
-  .sec-3-h1  {
-      color: black;
-      font-size: 4.5rem;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      text-align: center;
-      padding: 0.5rem 0 0 0;
-  }
-  .bg-3{
-    padding: 2rem 0 5rem 0;
+  .bg-1{
     background-color: white;
     width: 1400px;
-    border-radius: 20px;
-    margin-bottom: 2rem;
+    border-radius: 15px;
+    margin: 3rem 0 4rem 0;
   }
-  .sec-2-text h3{
+
+  .sec-1-h1  {
     color: black;
     font-size: 3.5rem;
-    padding: 0 0 0 6rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-  }
-  .sec-2-p{
-    color: black;
-    width: 600px;
-    padding: 2em 0 0 6rem;
-    font-size: 1.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-  }
-  .bg-2{
-    padding: 2rem 0 0 0;
-    background-color: white;
-    width: 1400px;
-    /* align-items: center; */
-    border-radius: 20px;
-    margin:5rem 0 5rem 0;
-  }
-  .img img{
-    padding: 2rem;
-  }
-
-  .sec2-img{
-    padding: 1rem 0 1rem 15rem;
-
-    /* align-items: center; */
-  }
-  .sec-3-text{
-    color: black;
-    font-size: 1.5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 0 0 2rem 4rem;
-    width: 600px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    /* padding: 0.6rem 0 0.6rem  0.6rem; */
+}
+
+.product-name{
+    background-color: #4f4a4a;
+    width: 800px;
+    border-radius: 15px;
+    margin: 1rem 0 1rem 5rem;
+}
+
+
+.icon{
+    color: #52f862;
+    padding: 0 0 0 2rem;
+    font-size: 1.5rem;
+}
+
+.sec-1-text{
+    padding: 0.6rem 0 0.6rem  0.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+.product-name-1{
+    background-color: #4f4a4a;
+    width: 700px;
+    border-radius: 15px;
+    margin: 1rem 0 1rem 39rem;
+}
+
+.icon-1{
+    color: #52f862;
+    padding: 0 0 0 2rem;
+    font-size: 1.5rem;
+}
+
+.sec-2-text{
+    padding: 0.6rem 0 0.6rem  0.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.leaf2{
+    position: relative;
+    left: 25rem;
   }
 
-  .forleaf{
-    display: flex;
-  }
-  
-  .leaf2{
-    position: relative;
-    left: 12rem;
-  }
   .leaf-2{
     position: absolute;
+    left: 58rem;
+  }
+.leaf3{
+    position: relative;
     left: 20rem;
   }
-  .sect-3-h1{
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 4rem;
-    padding: 1.5rem 0 0 0 ;
+
+  .leaf-3{
+    position: absolute;
+    left: 63rem;
   }
+  
   .bg-foot{
+    margin: 4rem 0 0 0;
     background-color: white;
   }
   .bg-foot p{
@@ -257,7 +244,5 @@ body{
     margin-bottom: 3rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  
 
-  
 
